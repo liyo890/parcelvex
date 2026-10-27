@@ -35,3 +35,11 @@ The charcoal-and-mint identity is preserved. A shipping label becomes the compos
 JavaScript syntax checks and browser checks at 1440, 768, and 390 pixels. Verified tracking stages, sample lookup, calculator arithmetic (including a RM 76.90 route/size/weight/extras combination), matching planner summaries, label creation and SVG download, route swapping, and motion controls. No horizontal page overflow or JavaScript errors were observed.
 
 ParcelVex uses WebGL depth testing for correct overlapping surfaces, interior walls and layered flaps. SVG icons share a 24px grid. Model animation stops when offscreen, hidden, or paused.
+
+## Motion and dropdown repair
+
+The van keeps a fixed pose during idle and hover; its service card uses a small, eased scale response. Hero van rotation remains controlled by drag and keyboard. Other model motion uses elapsed-time easing and follows the display refresh rate, preserving its phase through pause/resume.
+
+`dist/interactions.css` animates all three native select pickers, their arrows and option highlights, plus FAQ disclosures and the mobile navigation. Native selection, keyboard handling, and form events are preserved. Browsers supporting `appearance: base-select` receive the styled picker; older browsers retain their native picker. Reduced-motion settings disable these transitions.
+
+Regression check: `node tests/model-motion.cjs`. Browser checks cover all three select pickers, keyboard selection, Escape, pointer selection, route swapping, quote updates, FAQ expansion, mobile navigation and reduced-motion durations.

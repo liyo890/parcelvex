@@ -1,0 +1,49 @@
+/* Native select semantics, with a styled and animated picker where supported. */
+.quote-panel select{transition:background-color 160ms ease-out,border-color 160ms ease-out;min-height:44px}
+.quote-panel select:hover{background-color:#2d3b26;border-color:#799469}
+.quote-panel select:focus-visible{border-color:var(--accent)}
+@supports (appearance:base-select){
+  .quote-panel select,.quote-panel select::picker(select){appearance:base-select}
+  .quote-panel select{display:flex;align-items:center;justify-content:space-between;gap:8px;white-space:nowrap}
+  .quote-panel select::picker-icon{color:var(--accent);transition:rotate 180ms ease-out;flex:none}
+  .quote-panel select:open::picker-icon{rotate:180deg}
+  .quote-panel select:open{border-color:#92b980;background:#2d3b26}
+  .quote-panel select::picker(select){
+    background:#202a1c;color:var(--ink);border:1px solid #526348;border-radius:10px;
+    padding:6px;margin-top:7px;box-shadow:0 12px 28px #0005;
+    min-width:anchor-size(width);max-width:calc(100vw - 24px);max-height:min(320px,60svh);
+    overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#718c60 #202a1c;
+    opacity:0;transform:translateY(-6px) scale(.98);transform-origin:top center;
+    transition:opacity 180ms ease-out,transform 180ms ease-out,display 180ms allow-discrete,overlay 180ms allow-discrete;
+  }
+  .quote-panel select:open::picker(select){opacity:1;transform:translateY(0) scale(1)}
+  @starting-style{.quote-panel select:open::picker(select){opacity:0;transform:translateY(-6px) scale(.98)}}
+  .quote-panel option{display:flex;align-items:center;gap:10px;min-height:44px;padding:11px 12px;border-radius:6px;font:inherit;cursor:pointer;outline-offset:-3px;transition:background-color 140ms ease-out,color 140ms ease-out}
+  .quote-panel option:hover,.quote-panel option:focus-visible{background:#35492b;color:#edffe7}
+  .quote-panel option:checked{background:#2f4227;color:var(--accent)}
+  .quote-panel option::checkmark{color:var(--accent);order:1;margin-left:auto}
+}
+/* Stable van pose, with one composited response instead of competing rotations. */
+.blue-art .service-canvas{transform:scale(1);transition:transform 200ms ease-out;transform-origin:50% 60%}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  body:not(.motion-off) .service-card:hover .blue-art .service-canvas,
+  body:not(.motion-off) .service-card:focus-within .blue-art .service-canvas{transform:scale(1.025)}
+  body:not(.motion-off) .service-carousel.dragging .blue-art .service-canvas{transform:scale(1)}
+}
+/* Disclosure content keeps native details/summary keyboard behavior. */
+@supports (interpolate-size:allow-keywords){
+  .faq-list details{interpolate-size:allow-keywords}
+  .faq-list details::details-content{block-size:0;opacity:0;overflow:clip;transition:block-size 200ms ease-out,opacity 160ms ease-out,content-visibility 200ms allow-discrete}
+  .faq-list details[open]::details-content{block-size:auto;opacity:1}
+}
+.faq-list summary>span{transition:transform 180ms ease-out}
+@media(max-width:900px){
+  .header nav{display:none;position:absolute;top:89px;left:var(--page);right:var(--page);flex-direction:column;gap:8px;padding:20px;background:#2c3926;border-radius:7px;z-index:10;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity 180ms ease-out,transform 180ms ease-out,display 180ms allow-discrete}
+  .header.menu-open nav{display:flex;opacity:1;transform:translateY(0);pointer-events:auto}
+  @starting-style{.header.menu-open nav{opacity:0;transform:translateY(-8px)}}
+}
+@media(max-width:650px){.header nav{top:80px}}
+body.motion-off select::picker(select),body.motion-off select::picker-icon,body.motion-off details::details-content{transition:none!important}
+@media(prefers-reduced-motion:reduce){
+  .quote-panel select::picker(select),.quote-panel select::picker-icon,.faq-list details::details-content{transition:none!important}
+}

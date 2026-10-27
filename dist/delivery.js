@@ -33,12 +33,13 @@
   class Illustration {
     constructor(canvas,kind='hero'){
       this.canvas=canvas;try{this.renderer=new ParcelDepthRenderer(canvas);}catch{canvas.classList.add('model-unavailable');canvas.insertAdjacentHTML('afterend','<p class="model-fallback">3D preview unavailable on this device. Parcel planning and tracking are still available.</p>');}this.kind=kind;this.yaw=-.58;this.pitch=.34;this.open=0;this.w=1;this.h=1;this.visible=true;this.hover=0;this.desiredOpen=kind==='packing'?1:0;
+      this.lastRender=0;this.phase=0;this.hoverBlend=0;this.interacting=false;
       new ResizeObserver(()=>this.resize()).observe(canvas);
       canvas.addEventListener('modelrestore',()=>{this.render(performance.now());scheduleModels();});
       new IntersectionObserver(([e])=>{this.visible=e.isIntersecting;if(e.isIntersecting){this.render(performance.now());scheduleModels();}}).observe(canvas);
       if(kind!=='hero'){
-        canvas.parentElement.addEventListener('pointerenter',()=>{this.hover=1;this.render(performance.now());});
-        canvas.parentElement.addEventListener('pointerleave',()=>{this.hover=0;this.render(performance.now());});
+        canvas.parentElement.addEventListener('pointerenter',e=>{if(e.pointerType==='touch')return;this.hover=1;scheduleModels();});
+        canvas.parentElement.addEventListener('pointerleave',()=>{this.hover=0;scheduleModels();});
       }
     }
     resize(){const r=this.canvas.getBoundingClientRect();this.w=r.width;this.h=r.height;this.dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.w*this.dpr);this.canvas.height=Math.round(this.h*this.dpr);this.render(performance.now());}
@@ -82,7 +83,7 @@
       // Folded edges and kraft reinforcement along the base.
       this.box(ox,oy-h+.035,oz,w*2+.008,.045,d*2+.008,'#af8053');
     }
-    wheel(x,y,z){const n=16,r=.32,depth=.16;const front=[],back=[];for(let i=0;i<n;i++){const a=i/n*Math.PI*2;front.push([x+Math.cos(a)*r,y+Math.sin(a)*r,z+depth/2]);back.push([x+Math.cos(a)*r,y+Math.sin(a)*r,z-depth/2]);}for(let i=0;i<n;i++)this.face([front[i],front[(i+1)%n],back[(i+1)%n],back[i]],'#222a22',null,null,true);this.face(front,'#263326',[0,0,1]);this.face(back,'#263326',[0,0,-1]);const hub=front.map(p=>[x+(p[0]-x)*.45,y+(p[1]-y)*.45,p[2]+.01]);this.face(hub,'#9aaca0',[0,0,1]);}
+    wheel(x,y,z){const n=48,r=.32,depth=.16;const front=[],back=[];for(let i=0;i<n;i++){const a=i/n*Math.PI*2;front.push([x+Math.cos(a)*r,y+Math.sin(a)*r,z+depth/2]);back.push([x+Math.cos(a)*r,y+Math.sin(a)*r,z-depth/2]);}for(let i=0;i<n;i++)this.face([front[i],front[(i+1)%n],back[(i+1)%n],back[i]],'#222a22',null,null,true);this.face(front,'#263326',[0,0,1]);this.face(back,'#263326',[0,0,-1]);const hub=front.map(p=>[x+(p[0]-x)*.45,y+(p[1]-y)*.45,p[2]+.01]);this.face(hub,'#9aaca0',[0,0,1]);}
     van(tape){this.box(-.55,.23,0,2.25,1.65,1.5,tape);this.box(.98,-.02,0,1.05,1.15,1.46,tape);this.box(1.23,-.33,0,.66,.51,1.5,tape);this.box(0,-.57,0,3.35,.21,1.42,'#31432f');
       this.face([[.55,.51,.75],[1.3,.51,.75],[1.3,.02,.75],[.55,.02,.75]],'#41644d',[0,0,1]);
       this.face([[1.52,.48,.65],[1.52,.48,-.65],[1.52,.02,-.65],[1.52,.02,.65]],'#43644f',[1,0,0]);
@@ -92,8 +93,17 @@
       this.box(.98,-.13,.76,.19,.035,.02,'#44683d');
     }
     render(now){if(!this.renderer||this.w<2||!this.visible)return;const hero=this.kind==='hero';const kind=hero?state.model:this.kind;const tape=hero||kind==='packing'||kind==='sizer'?state.tape:kind==='van'?'#9dbef3':kind==='care'?'#e5a4bc':'#b1e69e';
-      const desired=hero?(state.open&&kind==='parcel'?1:0):this.desiredOpen;this.open=motion?this.open+(desired-this.open)*.13:desired;
-      this.renderYaw=this.yaw+(motion&&!state.paused?Math.sin(now*.0003)*.1:0)+(hero?0:this.hover*.17);
+      const dt=Math.min(50,this.lastRender?now-this.lastRender:16.67);this.lastRender=now;
+      const ease=1-Math.exp(-dt/110),desired=hero?(state.open&&kind==='parcel'?1:0):this.desiredOpen;
+      this.open=motion?this.open+(desired-this.open)*ease:desired;
+      if(Math.abs(desired-this.open)<.001)this.open=desired;
+      // The van stays rigid. Only explicit hero drag/keyboard input rotates it.
+      // Other illustrations ease to hover targets; phase stops rather than snapping on pause.
+      const hoverTarget=motion&&kind!=='van'?this.hover:0;
+      this.hoverBlend=motion?this.hoverBlend+(hoverTarget-this.hoverBlend)*ease:0;
+      if(Math.abs(hoverTarget-this.hoverBlend)<.001)this.hoverBlend=hoverTarget;
+      if(motion&&!state.paused&&!this.interacting&&kind!=='van')this.phase+=dt*.0003;
+      this.renderYaw=this.yaw+(kind==='van'?0:Math.sin(this.phase)*.1)+(hero?0:this.hoverBlend*.17);
       this.scale=Math.min(this.w/(hero?4.65:4.8),this.h/(hero?4.35:3.5))*(kind!=='van'?1-this.open*.22:1);this.faces=[];
       // A horizontal floor mesh shares the same depth buffer as the parcel.
       const ground=kind==='van'?-.98:-.93*(hero||kind==='sizer'?sizes[state.size].scale:.86)-.015;
@@ -106,10 +116,10 @@
   const hero=new Illustration($('#parcel-canvas'),'hero');
   const packingModel=new Illustration($('#packing-canvas'),'packing'),sizerModel=new Illustration($('#sizer-canvas'),'sizer');
   const illustrations=[hero,packingModel,sizerModel,...$$('.service-canvas').map(c=>new Illustration(c,c.dataset.scene))];
-  let lastFrame=0,modelFrame=0;
-  const needsFrame=i=>i.renderer&&!i.renderer.lost&&i.visible&&motion&&(!state.paused||Math.abs(i.open-(i.kind==='hero'?(state.open&&state.model==='parcel'?1:0):i.desiredOpen))>.002);
+  let modelFrame=0;
+  const needsFrame=i=>{const kind=i.kind==='hero'?state.model:i.kind;return i.renderer&&!i.renderer.lost&&i.visible&&motion&&((!state.paused&&kind!=='van'&&!i.interacting)||Math.abs(i.open-(i.kind==='hero'?(state.open&&state.model==='parcel'?1:0):i.desiredOpen))>.001||(kind!=='van'&&Math.abs(i.hoverBlend-i.hover)>.001));};
   function scheduleModels(){if(!modelFrame&&!document.hidden&&illustrations.some(needsFrame))modelFrame=requestAnimationFrame(frame);}
-  function frame(now){modelFrame=0;if(document.hidden)return;if(now-lastFrame>=1000/35){lastFrame=now;illustrations.forEach(i=>{if(needsFrame(i))i.render(now);});}scheduleModels();}
+  function frame(now){modelFrame=0;if(document.hidden)return;illustrations.forEach(i=>{if(needsFrame(i))i.render(now);});scheduleModels();}
   const renderAll=()=>{illustrations.forEach(i=>i.render(performance.now()));scheduleModels();};
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(modelFrame);modelFrame=0;}else renderAll();});
   function setModel(model){state.model=model;if(model==='van')state.open=false;$$('[data-model]').forEach(b=>{const active=b.dataset.model===model;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});$('.stage-heading>span').innerHTML=`<i class="status-dot"></i>${model==='parcel'?'Your parcel, in 3D':'Good things, on the road'}`;$('#model-hint').textContent=model==='parcel'?'Drag to turn it. Click to unpack it.':'A little more get-up-and-go. Drag to explore.';$('#model-size').textContent=model==='parcel'?`${sizes[state.size].name} · ${sizes[state.size].dims}`:'Made for the little journeys.';$('#open-parcel').setAttribute('aria-pressed',String(state.open));$('#open-parcel').innerHTML=model==='van'?'Unpack a parcel <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>':state.open?'Pack it up <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 7-10 10M7 7v10h10"/></svg>':'Unpack it <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>';$('#parcel-canvas').setAttribute('aria-label',model==='parcel'?'Interactive 3D cardboard parcel. Drag or use arrow keys to rotate. Press Space to open the parcel.':'Interactive 3D delivery van. Drag or use arrow keys to rotate.');hero.yaw=-.58;renderAll();}
@@ -124,9 +134,10 @@
   $('#pause-model').addEventListener('click',()=>{state.paused=!state.paused;updatePause();renderAll();});
   $('#reset-model').addEventListener('click',()=>{hero.yaw=-.58;hero.pitch=.34;setModel('parcel');toggleOpen(false);toast('A fresh perspective.');});
   let drag=null;
-  $('#parcel-canvas').addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,originX:e.clientX,originY:e.clientY,moved:false};e.currentTarget.setPointerCapture(e.pointerId);});
+  $('#parcel-canvas').addEventListener('pointerdown',e=>{hero.interacting=true;drag={x:e.clientX,y:e.clientY,originX:e.clientX,originY:e.clientY,moved:false};e.currentTarget.setPointerCapture(e.pointerId);});
   $('#parcel-canvas').addEventListener('pointermove',e=>{if(!drag)return;if(Math.hypot(e.clientX-drag.originX,e.clientY-drag.originY)>6)drag.moved=true;hero.yaw+=(e.clientX-drag.x)*.009;hero.pitch=clamp(hero.pitch+(e.clientY-drag.y)*.006,-.6,1);drag.x=e.clientX;drag.y=e.clientY;hero.render(performance.now());});
-  $('#parcel-canvas').addEventListener('pointerup',()=>{if(drag&&!drag.moved&&state.model==='parcel')toggleOpen();drag=null;});$('#parcel-canvas').addEventListener('pointercancel',()=>drag=null);
+  function endModelDrag(){drag=null;hero.interacting=false;scheduleModels();}
+  $('#parcel-canvas').addEventListener('pointerup',()=>{if(drag&&!drag.moved&&state.model==='parcel')toggleOpen();endModelDrag();});$('#parcel-canvas').addEventListener('pointercancel',endModelDrag);$('#parcel-canvas').addEventListener('lostpointercapture',endModelDrag);
   $('#parcel-canvas').addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown',' '].includes(e.key)){e.preventDefault();if(e.key===' ')toggleOpen();else if(e.key==='ArrowLeft')hero.yaw-=.16;else if(e.key==='ArrowRight')hero.yaw+=.16;else hero.pitch=clamp(hero.pitch+(e.key==='ArrowUp'?.12:-.12),-.6,1);hero.render(performance.now());}});
 
   // Honest local shipment tracking: only the explicitly identified sample is recognized.
