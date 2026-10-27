@@ -1,40 +1,35 @@
-# Kinetic
+# Kinetic Delivery
 
-A responsive, dependency-free interaction playground built with HTML, CSS, JavaScript, and a custom canvas renderer.
+An interactive parcel delivery concept built with HTML, CSS, JavaScript, and native canvas. No build step or JavaScript dependencies.
 
-## Run locally
+## Preview
 
-From this folder:
+Run `python -m http.server 4174 --bind 127.0.0.1 --directory dist` from this folder, then open http://127.0.0.1:4174.
 
-```powershell
-python -m http.server 4174 --bind 127.0.0.1 --directory dist
-```
+## Features
 
-Open http://127.0.0.1:4174. There is no build or install step.
+- Real 3D parcel and delivery-van geometry, with projected textures, depth sorting, directional lighting, orbit drag, and keyboard rotation.
+- Hinged parcel flaps, three parcel sizes, mint/sky/rose tape, care-label toggle, model reset, and ambient-motion pause.
+- Demo tracking for KT20261027 only; other identifiers show a validation message. A route illustration and five-step timeline support direct selection and playback.
+- Draggable service carousel with touch, keyboard, arrow-button, and dot navigation; hover responses on 3D service illustrations.
+- Instant sample estimates based on route, parcel size, weight, delivery style, and care option; origin/destination swap.
+- Native modal parcel planner with date validation, safe text rendering, downloadable SVG demo shipping labels, and repeat planning.
+- Interactive three-step packing storyboard, optional synthesized sounds, confetti, magnetic buttons, accordion answers, and reduced-motion support.
 
-## Interactions
+## Demonstration boundaries
 
-- Drag the shaded 3D sculpture; use arrow keys when it is focused. Switch between orbit, knot, and bloom; change colors; pause or randomize it.
-- Browse the scroll-snap carousel with drag, touch, arrow keys, arrow buttons, or pagination dots.
-- Open four experiments: a magnetic dot field, a spring-return draggable ball, click-generated ripples, and a type playground with editable text and font weight.
-- Try magnetic links, press feedback, a 1.1-second hold action, a reversible love toggle, and canvas confetti.
-- Enable synthesized interaction audio. No recording or microphone is involved.
-- Toggle ambient motion. Device reduced-motion settings are respected automatically.
+This is a working frontend concept. Shipment statuses, routes, and prices are illustrative. No courier, payment, tracking API, collection, or real booking is connected. Shipping labels are marked DEMO ONLY and NOT VALID POSTAGE. Visitor inputs remain in the browser.
 
-## Implementation
+## Files and hosting
 
-All served files are in `dist/`. The only external resource is the optional Archivo web font, with an Arial fallback. No API, account, database, or third-party JavaScript is required.
+`dist/index.html`, `dist/delivery.css`, and `dist/delivery.js` are the active application. Archivo uses an optional Google Fonts stylesheet with an Arial fallback. The original playground's unused CSS/JS are retained as legacy source assets and are not loaded.
 
-The experiment dialog uses native modal focus management and Escape handling. Interactive graphics have keyboard controls. Mouse dragging does not interfere with ordinary vertical page scrolling.
+The existing site identity and owner-only audience are preserved in `.openai/hosting.json`. Package and push the exact source before deploying.
 
-## Design decisions
+## Design
 
-The original concept is an interaction exhibit: Kinetic's name becomes motion visitors can directly manipulate. A charcoal ground, mint material, and Archivo typography connect the sculpture and controls. The fixed visual frame changes its contents as shape and color controls are used. The interface itself supplies the artwork; stock photography and video would not demonstrate the requested interactions.
-
-The user's request for extensive hover, active-button, and carousel interactions takes precedence over generic style restrictions on multiple live demos, lateral scrolling, and tactile button depth. Symbols are functional vector-like glyphs rather than pictorial emoji. Small secondary captions, the cropped footer wordmark, and carousel edges are intentional; important prose and controls are larger.
+The charcoal-and-mint identity is preserved. A shipping label becomes the compositional device: route details, the tear-off tracking slip, package labels, and the downloadable label share the same visual language. The user's request for 3D illustration and extensive interaction takes precedence over generic restrictions on multiple interactive demos and a horizontal carousel. All illustrations are actual generated geometry; stock imagery would not demonstrate the requested manipulation.
 
 ## Verification
 
-Browser layout checks at 1440, 768, and 390 pixels found no horizontal page overflow or JavaScript errors. The hero, collection, controls, and phone layout were visually inspected. Browser interactions verified sculpture state changes, all four dialogs, keyboard manipulation, editable text, press-and-hold completion, button toggles, reset, confetti, and motion control.
-
-Hosting identity is stored in `.openai/hosting.json`. The Sites workflow publishes the exact pushed source with the static deployment archive.
+JavaScript syntax checks and browser checks at 1440, 768, and 390 pixels. Verified tracking stages, sample lookup, calculator arithmetic (including a RM 76.90 route/size/weight/extras combination), matching planner summaries, label creation and SVG download, route swapping, and motion controls. No horizontal page overflow or JavaScript errors were observed.

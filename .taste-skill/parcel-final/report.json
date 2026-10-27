@@ -1,0 +1,3156 @@
+{
+ "url": "http://127.0.0.1:4174",
+ "at": "2026-10-27T06:21:01.283Z",
+ "allow": [
+  "emoji",
+  "eyebrow",
+  "outlined-box",
+  "few-pictures",
+  "small-text",
+  "covered-text",
+  "edge-text",
+  "body-size"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.45,
+    0.6,
+    0.63,
+    0.47,
+    0.77,
+    0.48,
+    0.86
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 3,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6116,
+     "screens": 6.8,
+     "words": 748,
+     "img": 0,
+     "video": 0,
+     "canvas": 5,
+     "svg": 6,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 3,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "♡",
+      "✳",
+      "✓"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Good things. On their way.",
+     "words": 5,
+     "chars": 26,
+     "lines": 2,
+     "size": 108,
+     "vw": 7.5,
+     "font": "Archivo",
+     "weight": 550,
+     "tracking": -0.065,
+     "leading": 0.99,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.42,
+     "top": 233,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Good things. On their way.",
+     "words": 5,
+     "lines": 2,
+     "size": 108,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "kinetic delivery, with feeling.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Archivo",
+      "weight": 750,
+      "tracking": -0.053,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.07,
+      "top": 30,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Good things. On their way.",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 108,
+      "vw": 7.5,
+      "font": "Archivo",
+      "weight": 550,
+      "tracking": -0.065,
+      "leading": 0.99,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 233,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "⌖",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 44,
+      "vw": 3.1,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.01,
+      "top": 954,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 1151,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Every parcel. A little journey.",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 1360,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Making its way to a good day.",
+      "words": 7,
+      "chars": 29,
+      "lines": 2,
+      "size": 31,
+      "vw": 2.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.039,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.31,
+      "top": 1613,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "One small parcel. Big possibilities.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 2282,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Big or small. Find your fit.",
+      "words": 6,
+      "chars": 28,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 3247,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "RM 12.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 33,
+      "vw": 2.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.13,
+      "top": 3675,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Pack. Send. Make their day.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 4060,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "♡",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 50,
+      "vw": 3.5,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 4349,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Good questions. Simple answers.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 60.5,
+      "vw": 4.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4775,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Good things start with you.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 77.8,
+      "vw": 5.4,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 5404,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "kinetic",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 417.6,
+      "vw": 29,
+      "font": "Archivo",
+      "weight": 650,
+      "tracking": -0.07,
+      "leading": 0.73,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 5851,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 21,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Archivo",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      23,
+      24,
+      26,
+      34,
+      37,
+      50,
+      61,
+      78,
+      108,
+      418
+     ],
+     "sizeCount": 20,
+     "notLoaded": [],
+     "body": {
+      "font": "Archivo",
+      "size": 14,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 69,
+     "max": {
+      "size": 417.6,
+      "vw": 29,
+      "font": "Archivo",
+      "text": "kinetic"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.08,
+     "smallText": 15
+    },
+    "eyebrows": [
+     {
+      "text": "A little care. Every step of the way.",
+      "above": "Good things. On their way.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 189
+     },
+     {
+      "text": "Follow the good things",
+      "above": "Every parcel. A little journey.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1324
+     },
+     {
+      "text": "Whatever you’re sending",
+      "above": "One small parcel. Big possibilities.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2246
+     },
+     {
+      "text": "Less guesswork. More good things.",
+      "above": "Big or small. Find your fit.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 3211
+     },
+     {
+      "text": "A little less complicated",
+      "above": "Pack. Send. Make their day.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 4024
+     },
+     {
+      "text": "A few things, unpacked.",
+      "above": "Good questions. Simple answers.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 4739
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111313",
+     "bodyBgHsl": {
+      "h": 180,
+      "s": 0.06,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#202b1d",
+       "top": 1532,
+       "hsl": {
+        "h": 107,
+        "s": 0.19,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#1b1f1c",
+       "top": 3107,
+       "hsl": {
+        "h": 135,
+        "s": 0.07,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#1c2519",
+       "top": 3914,
+       "hsl": {
+        "h": 105,
+        "s": 0.19,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#bcf8ae",
+       "top": 5319,
+       "hsl": {
+        "h": 109,
+        "s": 0.84,
+        "l": 0.83
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a4aba0",
+       "share": 0.51
+      },
+      {
+       "color": "#f1f2eb",
+       "share": 0.15
+      },
+      {
+       "color": "#1e321a",
+       "share": 0.11
+      },
+      {
+       "color": "#b4c0aa",
+       "share": 0.06
+      },
+      {
+       "color": "#56624c",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#bcf8ae",
+      "hsl": {
+       "h": 109,
+       "s": 0.84,
+       "l": 0.83
+      },
+      "fg": "#1e321a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 5,
+     "radius": "pill",
+     "height": 49,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Send a parcel ↗",
+      "Let’s send something ↗",
+      "Parcel",
+      "Unpack it ↗"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 13,
+     "boxRadius": 6,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4042
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": false,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6116,
+    "margins": {
+     "left": 71,
+     "right": 71
+    },
+    "sections": [
+     {
+      "sel": "section.hero.wrap",
+      "tag": "section",
+      "top": 112,
+      "height": 788,
+      "words": 91,
+      "media": 1,
+      "middle": 70,
+      "heading": {
+       "text": "Good things.",
+       "size": 108,
+       "tag": "h1"
+      },
+      "left": 71,
+      "right": 71,
+      "textLeft": 71,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.quick-track.wrap",
+      "tag": "section",
+      "top": 900,
+      "height": 160,
+      "words": 15,
+      "media": 0,
+      "middle": 284,
+      "heading": {
+       "text": "Something good",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 154,
+      "right": 117,
+      "textLeft": 154,
+      "textRight": 119,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#tracking.section-pad.wrap",
+      "tag": "section",
+      "top": 1214,
+      "height": 1022,
+      "words": 108,
+      "media": 1,
+      "middle": 82,
+      "heading": {
+       "text": "Every parcel.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 71,
+      "textLeft": 71,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services-section.section-pad",
+      "tag": "section",
+      "top": 2236,
+      "height": 845,
+      "words": 112,
+      "media": 3,
+      "middle": 25,
+      "heading": {
+       "text": "One small parcel.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 0,
+      "textLeft": 71,
+      "textRight": 26,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#quote.quote-section.section-pad",
+      "tag": "section",
+      "top": 3082,
+      "height": 832,
+      "words": 114,
+      "media": 0,
+      "middle": 406,
+      "heading": {
+       "text": "Big or small.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 101,
+      "textLeft": 71,
+      "textRight": 101,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how-it-works.how-section.section-pad",
+      "tag": "section",
+      "top": 3914,
+      "height": 715,
+      "words": 89,
+      "media": 0,
+      "middle": 334,
+      "heading": {
+       "text": "Pack. Send.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 71,
+      "textLeft": 71,
+      "textRight": 277,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#questions.faq-section.section-pad",
+      "tag": "section",
+      "top": 4629,
+      "height": 691,
+      "words": 197,
+      "media": 0,
+      "middle": 250,
+      "heading": {
+       "text": "Good questions.",
+       "size": 60,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 71,
+      "textLeft": 71,
+      "textRight": 105,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 5319,
+      "height": 797,
+      "words": 44,
+      "media": 0,
+      "middle": 62,
+      "heading": {
+       "text": "kinetic",
+       "size": 418,
+       "tag": "div"
+      },
+      "left": 59,
+      "right": 71,
+      "textLeft": 59,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Good things. On their way.",
+      "size": 108,
+      "top": 233,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 71,
+      "n": 13
+     },
+     {
+      "x": 743,
+      "n": 5
+     },
+     {
+      "x": 615,
+      "n": 1
+     },
+     {
+      "x": 1160,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 20,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.08,
+    "voidBox": {
+     "x": 240,
+     "y": 780,
+     "w": 840,
+     "h": 120
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.41,
+    0.67,
+    0.6,
+    0.64,
+    0.76,
+    0.74
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 3,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5867,
+     "screens": 5.7,
+     "words": 724,
+     "img": 0,
+     "video": 0,
+     "canvas": 5,
+     "svg": 6,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 4,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "♡",
+      "✳",
+      "✓"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Good things. On their way.",
+     "words": 5,
+     "chars": 26,
+     "lines": 2,
+     "size": 66.8,
+     "vw": 8.7,
+     "font": "Archivo",
+     "weight": 550,
+     "tracking": -0.065,
+     "leading": 0.99,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 334,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Good things. On their way.",
+     "words": 5,
+     "lines": 2,
+     "size": 66.8,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "kinetic delivery, with feeling.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Archivo",
+      "weight": 750,
+      "tracking": -0.053,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.13,
+      "top": 30,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Good things. On their way.",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 66.8,
+      "vw": 8.7,
+      "font": "Archivo",
+      "weight": 550,
+      "tracking": -0.065,
+      "leading": 0.99,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 334,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "⌖",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 1042,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 37,
+      "vw": 4.8,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1319,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Every parcel. A little journey.",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 42,
+      "vw": 5.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.31,
+      "top": 1508,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Making its way to a good day.",
+      "words": 7,
+      "chars": 29,
+      "lines": 2,
+      "size": 28,
+      "vw": 3.6,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.043,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.37,
+      "top": 1720,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "One small parcel. Big possibilities.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 42,
+      "vw": 5.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 2348,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Big or small. Find your fit.",
+      "words": 6,
+      "chars": 28,
+      "lines": 2,
+      "size": 45,
+      "vw": 5.9,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 3301,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "RM 12.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 33,
+      "vw": 4.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.03,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.25,
+      "top": 3684,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Pack. Send. Make their day.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 42,
+      "vw": 5.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 4114,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "♡",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 50,
+      "vw": 6.5,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 4364,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Good questions. Simple answers.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 43,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 4750,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Good things start with you.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 5360,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "kinetic",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 222.7,
+      "vw": 29,
+      "font": "Archivo",
+      "weight": 650,
+      "tracking": -0.07,
+      "leading": 0.73,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 5726,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 21,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Archivo",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      24,
+      26,
+      34,
+      37,
+      42,
+      43,
+      45,
+      48,
+      50,
+      67,
+      223
+     ],
+     "sizeCount": 21,
+     "notLoaded": [],
+     "body": {
+      "font": "Archivo",
+      "size": 14,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 222.7,
+      "vw": 29,
+      "font": "Archivo",
+      "text": "kinetic"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.08,
+     "smallText": 12
+    },
+    "eyebrows": [
+     {
+      "text": "A little care. Every step of the way.",
+      "above": "Good things. On their way.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 290
+     },
+     {
+      "text": "Follow the good things",
+      "above": "Every parcel. A little journey.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1472
+     },
+     {
+      "text": "Whatever you’re sending",
+      "above": "One small parcel. Big possibilities.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2312
+     },
+     {
+      "text": "Less guesswork. More good things.",
+      "above": "Big or small. Find your fit.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 3265
+     },
+     {
+      "text": "A little less complicated",
+      "above": "Pack. Send. Make their day.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 4078
+     },
+     {
+      "text": "A few things, unpacked.",
+      "above": "Good questions. Simple answers.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 4714
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111313",
+     "bodyBgHsl": {
+      "h": 180,
+      "s": 0.06,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1b1f1c",
+       "top": 3088,
+       "hsl": {
+        "h": 135,
+        "s": 0.07,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#1c2519",
+       "top": 3988,
+       "hsl": {
+        "h": 105,
+        "s": 0.19,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#bcf8ae",
+       "top": 5275,
+       "hsl": {
+        "h": 109,
+        "s": 0.84,
+        "l": 0.83
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a4aba0",
+       "share": 0.5
+      },
+      {
+       "color": "#f1f2eb",
+       "share": 0.14
+      },
+      {
+       "color": "#1e321a",
+       "share": 0.11
+      },
+      {
+       "color": "#b4c0aa",
+       "share": 0.06
+      },
+      {
+       "color": "#56624c",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#bcf8ae",
+      "hsl": {
+       "h": 109,
+       "s": 0.84,
+       "l": 0.83
+      },
+      "fg": "#1e321a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 4,
+     "radius": "pill",
+     "height": 49,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Send a parcel ↗",
+      "Let’s send something ↗",
+      "Unpack it ↗"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4084
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.24
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5867,
+    "margins": {
+     "left": 38,
+     "right": 38
+    },
+    "sections": [
+     {
+      "sel": "section.hero.wrap",
+      "tag": "section",
+      "top": 112,
+      "height": 900,
+      "words": 91,
+      "media": 1,
+      "middle": 15,
+      "heading": {
+       "text": "Good things.",
+       "size": 67,
+       "tag": "h1"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.quick-track.wrap",
+      "tag": "section",
+      "top": 1012,
+      "height": 216,
+      "words": 15,
+      "media": 0,
+      "middle": 8,
+      "heading": {
+       "text": "Something good",
+       "size": 24,
+       "tag": "h2"
+      },
+      "left": 74,
+      "right": 74,
+      "textLeft": 76,
+      "textRight": 76,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#tracking.section-pad.wrap",
+      "tag": "section",
+      "top": 1382,
+      "height": 930,
+      "words": 108,
+      "media": 1,
+      "middle": 62,
+      "heading": {
+       "text": "Every parcel.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services-section.section-pad",
+      "tag": "section",
+      "top": 2312,
+      "height": 776,
+      "words": 98,
+      "media": 3,
+      "middle": 25,
+      "heading": {
+       "text": "One small parcel.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 0,
+      "textLeft": 38,
+      "textRight": 0,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#quote.quote-section.section-pad",
+      "tag": "section",
+      "top": 3088,
+      "height": 900,
+      "words": 114,
+      "media": 0,
+      "middle": 96,
+      "heading": {
+       "text": "Big or small.",
+       "size": 45,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 60,
+      "textLeft": 38,
+      "textRight": 60,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how-it-works.how-section.section-pad",
+      "tag": "section",
+      "top": 3988,
+      "height": 636,
+      "words": 89,
+      "media": 0,
+      "middle": 109,
+      "heading": {
+       "text": "Pack. Send.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#questions.faq-section.section-pad",
+      "tag": "section",
+      "top": 4624,
+      "height": 651,
+      "words": 197,
+      "media": 0,
+      "middle": 59,
+      "heading": {
+       "text": "Good questions.",
+       "size": 43,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 72,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 5275,
+      "height": 592,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "kinetic",
+       "size": 223,
+       "tag": "div"
+      },
+      "left": 26,
+      "right": 38,
+      "textLeft": 26,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Good things. On their way.",
+      "size": 67,
+      "top": 334,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Handle with care",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "For meaningful gifts and delicate little things.",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Add a care note to your sample parcel.",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Add a little care",
+      "side": "right",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 38,
+      "n": 13
+     },
+     {
+      "x": 403,
+      "n": 5
+     },
+     {
+      "x": 393,
+      "n": 1
+     },
+     {
+      "x": 748,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 20,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.59,
+    0.47,
+    0.92,
+    0.58,
+    0.71,
+    0.92,
+    0.81,
+    0.86
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 3,
+    "transitions": 13,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 6734,
+     "screens": 8,
+     "words": 675,
+     "img": 0,
+     "video": 0,
+     "canvas": 5,
+     "svg": 6,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 4,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 4,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "♡",
+      "✳",
+      "✓"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Good things. On their way.",
+     "words": 5,
+     "chars": 26,
+     "lines": 2,
+     "size": 61,
+     "vw": 15.6,
+     "font": "Archivo",
+     "weight": 550,
+     "tracking": -0.065,
+     "leading": 0.99,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.89,
+     "top": 161,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Good things. On their way.",
+     "words": 5,
+     "lines": 2,
+     "size": 61,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "kinetic delivery, with feeling.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 29,
+      "vw": 7.4,
+      "font": "Archivo",
+      "weight": 750,
+      "tracking": -0.062,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.23,
+      "top": 23,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "▥",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.05,
+      "top": 24,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Good things. On their way.",
+      "words": 5,
+      "chars": 26,
+      "lines": 2,
+      "size": 61,
+      "vw": 15.6,
+      "font": "Archivo",
+      "weight": 550,
+      "tracking": -0.065,
+      "leading": 0.99,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 161,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Something good heading your way?",
+      "words": 5,
+      "chars": 32,
+      "lines": 2,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.032,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.45,
+      "top": 1074,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "⌖",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 9.7,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.05,
+      "top": 1078,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Every parcel. A little journey.",
+      "words": 5,
+      "chars": 31,
+      "lines": 2,
+      "size": 42,
+      "vw": 10.8,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.6,
+      "top": 1481,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Making its way to a good day.",
+      "words": 7,
+      "chars": 29,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.04,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 2113,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "One small parcel. Big possibilities.",
+      "words": 5,
+      "chars": 36,
+      "lines": 2,
+      "size": 36,
+      "vw": 9.2,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 2770,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Big or small. Find your fit.",
+      "words": 6,
+      "chars": 28,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 3489,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "⇄",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.06,
+      "top": 3801,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "RM 12.90",
+      "words": 2,
+      "chars": 8,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.033,
+      "leading": 1.2,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 4252,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Pack. Send. Make their day.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 42,
+      "vw": 10.8,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 4580,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Good questions. Simple answers.",
+      "words": 4,
+      "chars": 31,
+      "lines": 2,
+      "size": 42,
+      "vw": 10.8,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 5453,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Good things start with you.",
+      "words": 5,
+      "chars": 27,
+      "lines": 2,
+      "size": 49,
+      "vw": 12.6,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.05,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 6184,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "kinetic",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 113.1,
+      "vw": 29,
+      "font": "Archivo",
+      "weight": 650,
+      "tracking": -0.07,
+      "leading": 0.73,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 6663,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 15,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 5,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Archivo",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      29,
+      36,
+      42,
+      44,
+      49,
+      61,
+      113
+     ],
+     "sizeCount": 20,
+     "notLoaded": [],
+     "body": {
+      "font": "Archivo",
+      "size": 14,
+      "leading": 1.8,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7
+     },
+     "measureChars": 40,
+     "max": {
+      "size": 113.1,
+      "vw": 29,
+      "font": "Archivo",
+      "text": "kinetic"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.08,
+     "smallText": 19
+    },
+    "eyebrows": [
+     {
+      "text": "A little care. Every step of the way.",
+      "above": "Good things. On their way.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 122
+     },
+     {
+      "text": "Follow the good things",
+      "above": "Every parcel. A little journey.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 1448
+     },
+     {
+      "text": "Whatever you’re sending",
+      "above": "One small parcel. Big possibilities.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2737
+     },
+     {
+      "text": "Less guesswork. More good things.",
+      "above": "Big or small. Find your fit.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 3456
+     },
+     {
+      "text": "A little less complicated",
+      "above": "Pack. Send. Make their day.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 4547
+     },
+     {
+      "text": "A few things, unpacked.",
+      "above": "Good questions. Simple answers.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 5420
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111313",
+     "bodyBgHsl": {
+      "h": 180,
+      "s": 0.06,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#202b1d",
+       "top": 1679,
+       "hsl": {
+        "h": 107,
+        "s": 0.19,
+        "l": 0.14
+       }
+      },
+      {
+       "color": "#f1f0e7",
+       "top": 2032,
+       "hsl": {
+        "h": 54,
+        "s": 0.26,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#c1edb5",
+       "top": 2875,
+       "hsl": {
+        "h": 107,
+        "s": 0.61,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#b7cdeb",
+       "top": 2875,
+       "hsl": {
+        "h": 215,
+        "s": 0.57,
+        "l": 0.82
+       }
+      },
+      {
+       "color": "#edb9cb",
+       "top": 2875,
+       "hsl": {
+        "h": 339,
+        "s": 0.59,
+        "l": 0.83
+       }
+      },
+      {
+       "color": "#1b1f1c",
+       "top": 3697,
+       "hsl": {
+        "h": 135,
+        "s": 0.07,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#1c2519",
+       "top": 4475,
+       "hsl": {
+        "h": 105,
+        "s": 0.19,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#bcf8ae",
+       "top": 6119,
+       "hsl": {
+        "h": 109,
+        "s": 0.84,
+        "l": 0.83
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a4aba0",
+       "share": 0.48
+      },
+      {
+       "color": "#f1f2eb",
+       "share": 0.15
+      },
+      {
+       "color": "#1e321a",
+       "share": 0.11
+      },
+      {
+       "color": "#b4c0aa",
+       "share": 0.07
+      },
+      {
+       "color": "#56624c",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#bcf8ae",
+      "hsl": {
+       "h": 109,
+       "s": 0.84,
+       "l": 0.83
+      },
+      "fg": "#1e321a"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 7,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 57,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to content",
+      "Let’s send something ↗"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 10,
+     "boxRadius": 12,
+     "squareMedia": 1,
+     "roundedMedia": 3,
+     "mediaRadius": 10,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 4820
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 0.37
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 91,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 6734,
+    "margins": {
+     "left": 22,
+     "right": 0
+    },
+    "sections": [
+     {
+      "sel": "section.hero.wrap",
+      "tag": "section",
+      "top": 91,
+      "height": 958,
+      "words": 74,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Good things.",
+       "size": 61,
+       "tag": "h1"
+      },
+      "left": 22,
+      "right": 22,
+      "textLeft": 22,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.quick-track.wrap",
+      "tag": "section",
+      "top": 1049,
+      "height": 209,
+      "words": 15,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Something good",
+       "size": 22,
+       "tag": "h2"
+      },
+      "left": 49,
+      "right": 49,
+      "textLeft": 52,
+      "textRight": 52,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.section-top.reveal",
+      "tag": "div",
+      "top": 1448,
+      "height": 201,
+      "words": 26,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Every parcel.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 53,
+      "textLeft": 22,
+      "textRight": 53,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.tracking-dashboard.reveal",
+      "tag": "div",
+      "top": 1679,
+      "height": 986,
+      "words": 82,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Making its way",
+       "size": 30,
+       "tag": "h3"
+      },
+      "left": 42,
+      "right": 42,
+      "textLeft": 47,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#services.services-section.section-pad",
+      "tag": "section",
+      "top": 2737,
+      "height": 719,
+      "words": 58,
+      "media": 3,
+      "middle": 315,
+      "heading": {
+       "text": "One small parcel.",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 0,
+      "textLeft": 22,
+      "textRight": 0,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#quote.quote-section.section-pad",
+      "tag": "section",
+      "top": 3456,
+      "height": 1020,
+      "words": 106,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Big or small.",
+       "size": 44,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 42,
+      "textLeft": 22,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#how-it-works.how-section.section-pad",
+      "tag": "section",
+      "top": 4475,
+      "height": 873,
+      "words": 87,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Pack. Send.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 22,
+      "textLeft": 22,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#questions.faq-section.section-pad",
+      "tag": "section",
+      "top": 5348,
+      "height": 771,
+      "words": 197,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Good questions.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 22,
+      "textLeft": 22,
+      "textRight": 57,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 6119,
+      "height": 616,
+      "words": 44,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Good things",
+       "size": 49,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 75,
+      "textLeft": 17,
+      "textRight": 75,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Good things. On their way.",
+      "size": 61,
+      "top": 161,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "A little more get-up-and-go.",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Express delivery",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "When that little something can’t wait.",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Choose a faster-paced sample delivery.",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Explore express",
+      "side": "right",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 22,
+      "n": 13
+     },
+     {
+      "x": 42,
+      "n": 5
+     },
+     {
+      "x": 364,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 19,
+    "bodySize": 14,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "20 different font sizes (11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 23, 24, 26, 34, 37, 50, 61, 78, 108, 418).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 1440,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "palette-cream",
+   "width": 390,
+   "message": "Yellow-cream background (section #f1f0e7).",
+   "fix": "Use the drawn palette. If you want warmth, take a low-chroma stone or bone, not a yellow cream."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 22px on the left, 0px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\parcel-final\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
