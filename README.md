@@ -1,4 +1,4 @@
-# Kinetic Delivery
+# ParcelVex
 
 An interactive parcel delivery concept built with HTML, CSS, JavaScript, and native canvas. No build step or JavaScript dependencies.
 
@@ -8,9 +8,9 @@ Run `python -m http.server 4174 --bind 127.0.0.1 --directory dist` from this fol
 
 ## Features
 
-- Real 3D parcel and delivery-van geometry, with projected textures, depth sorting, directional lighting, orbit drag, and keyboard rotation.
+- Real 3D parcel and delivery-van geometry, with mipmapped textures, WebGL depth testing, directional lighting, orbit drag, and keyboard rotation.
 - Hinged parcel flaps, three parcel sizes, mint/sky/rose tape, care-label toggle, model reset, and ambient-motion pause.
-- Demo tracking for KT20261027 only; other identifiers show a validation message. A route illustration and five-step timeline support direct selection and playback.
+- Demo tracking for PV20261027 only; other identifiers show a validation message. A route illustration and five-step timeline support direct selection and playback.
 - Draggable service carousel with touch, keyboard, arrow-button, and dot navigation; hover responses on 3D service illustrations.
 - Instant sample estimates based on route, parcel size, weight, delivery style, and care option; origin/destination swap.
 - Native modal parcel planner with date validation, safe text rendering, downloadable SVG demo shipping labels, and repeat planning.
@@ -22,7 +22,7 @@ This is a working frontend concept. Shipment statuses, routes, and prices are il
 
 ## Files and hosting
 
-`dist/index.html`, `dist/delivery.css`, and `dist/delivery.js` are the active application. Archivo uses an optional Google Fonts stylesheet with an Arial fallback. The original playground's unused CSS/JS are retained as legacy source assets and are not loaded.
+`dist/index.html`, `dist/delivery.css`, `dist/delivery.js`, and `dist/depth-renderer.js` are the active application. Archivo uses an optional Google Fonts stylesheet with an Arial fallback. The original playground's unused CSS/JS are retained as legacy source assets and are not loaded.
 
 The existing site identity and owner-only audience are preserved in `.openai/hosting.json`. Package and push the exact source before deploying.
 
@@ -33,3 +33,5 @@ The charcoal-and-mint identity is preserved. A shipping label becomes the compos
 ## Verification
 
 JavaScript syntax checks and browser checks at 1440, 768, and 390 pixels. Verified tracking stages, sample lookup, calculator arithmetic (including a RM 76.90 route/size/weight/extras combination), matching planner summaries, label creation and SVG download, route swapping, and motion controls. No horizontal page overflow or JavaScript errors were observed.
+
+ParcelVex uses WebGL depth testing for correct overlapping surfaces, interior walls and layered flaps. SVG icons share a 24px grid. Model animation stops when offscreen, hidden, or paused.
