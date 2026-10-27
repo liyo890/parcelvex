@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111313">
+  <meta name="description" content="Kinetic is a hands-on interaction playground. Shape a live sculpture, drag experiments, and discover the little details that make the web feel alive.">
+  <meta property="og:title" content="Kinetic — Made to be played with">
+  <meta property="og:description" content="Less watching. More playing. An interactive playground for curious people.">
+  <meta property="og:type" content="website">
+  <title>Kinetic — Made to be played with</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;450;500;550;600;650;700;750;800;850;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to playground</a>
+  <header class="header wrap">
+    <a class="wordmark" href="#" aria-label="Kinetic home"><svg class="brand-symbol" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 1v30M1 16h30M5.4 5.4l21.2 21.2M5.4 26.6 26.6 5.4"/></svg>kinetic<span class="wordmark-dot">®</span></a>
+    <nav aria-label="Main navigation"><a href="#playground">Playground</a><a href="#experiments">Experiments</a><a href="#about">The idea</a></nav>
+    <div class="header-actions"><button class="sound-control" id="sound" aria-pressed="false" aria-label="Enable interaction sounds"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="sound-label">Sound off</span></button><a class="small-cta" href="#playground">Let’s play <span>↗</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button></div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="playground" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="live-label"><span></span> A little less static. A lot more alive.</p>
+        <h1 id="hero-title">Made to be<br>played with.</h1>
+        <p class="hero-description">A digital playground for curious minds.<br>Hover, drag, click. See where it takes you.</p>
+        <div class="hero-actions"><a class="button primary magnetic" href="#experiments"><span>Explore the experiments</span><span class="arrow">↗</span></a><button class="text-button" id="surprise">Surprise me <span>⤨</span></button></div>
+        <div class="hero-note"><span class="note-symbol">✳</span><span>Built for the joy of<br>“wait, do that again.”</span></div>
+      </div>
+      <div class="sculpture-stage" data-ui>
+        <div class="stage-top"><span><span class="status-dot"></span>Live object</span><span id="object-name">The orbit</span></div>
+        <canvas id="sculpture" role="img" aria-label="An interactive mint green three-dimensional sculpture. Drag to rotate, or use arrow keys when focused." tabindex="0"></canvas>
+        <div class="drag-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 10 4-4 4 4M12 6v12m-4-4 4 4 4-4M6 12H3m18 0h-3"/></svg>Drag to explore</div>
+        <div class="sculpture-controls"><div class="shape-controls" role="group" aria-label="Sculpture shape"><button class="shape active" data-shape="orbit" aria-pressed="true" aria-label="Orbit shape"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="8" ry="5" transform="rotate(-35 12 12)"/></svg></button><button class="shape" data-shape="knot" aria-pressed="false" aria-label="Knot shape"><svg viewBox="0 0 24 24"><path d="M7 15c-6-10 8-13 8-5s-10 11-9 3S21 5 19 13s-13 4-8-3"/></svg></button><button class="shape" data-shape="bloom" aria-pressed="false" aria-label="Bloom shape"><svg viewBox="0 0 24 24"><path d="M12 5c4-9 10 1 5 4 10 0 5 11 0 7 2 10-9 10-9 2-8 5-12-7-3-8-3-7 6-10 7-5Z"/></svg></button></div><div class="swatches" role="group" aria-label="Sculpture color"><button data-color="#bcf8ae" style="--swatch:#bcf8ae" class="swatch active" aria-pressed="true" aria-label="Mint"></button><button data-color="#a7c3ff" style="--swatch:#a7c3ff" class="swatch" aria-pressed="false" aria-label="Sky"></button><button data-color="#ffb9d1" style="--swatch:#ffb9d1" class="swatch" aria-pressed="false" aria-label="Rose"></button></div><button class="pause" id="pause" aria-label="Pause animation" aria-pressed="false">Ⅱ</button></div>
+      </div>
+      <div class="hero-bottom"><a href="#experiments" class="scroll-cue"><span>↓</span> Scroll to get your hands on it</a><span>Independent experiments. Endless possibilities.</span></div>
+    </section>
+
+    <div class="ticker" aria-label="Hover, drag, click, discover"><div class="ticker-track" aria-hidden="true"><span>Hover a little</span><b>✳</b><span>Drag your curiosity</span><b>✳</b><span>Click into something new</span><b>✳</b><span>Feel the difference</span><b>✳</b><span>Hover a little</span><b>✳</b><span>Drag your curiosity</span><b>✳</b><span>Click into something new</span><b>✳</b><span>Feel the difference</span><b>✳</b></div></div>
+
+    <section class="experiments-section section-pad" id="experiments" aria-labelledby="experiments-title">
+      <div class="section-heading wrap"><div><p class="section-kicker">Follow your curiosity</p><h2 id="experiments-title">Small moves.<br>Big feelings.</h2></div><div class="section-intro"><p>A collection of playful interactions.<br>No right way to explore. Just jump in.</p><div class="carousel-tools"><span id="slide-count" aria-live="polite">1 / 4</span><button class="round-button" id="prev" aria-label="Previous experiment">←</button><button class="round-button" id="next" aria-label="Next experiment">→</button></div></div></div>
+      <div class="carousel" id="carousel" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Interactive experiments. Use arrow keys or drag to browse.">
+        <article class="experiment-card" data-experiment="magnet"><button class="experiment-open" data-open="magnet" aria-label="Open Magnetic field experiment"><div class="experiment-art magnet-art"><div class="magnet-grid" aria-hidden="true"></div><span class="art-hint">Move your mouse. Make a little gravity.</span><span class="open-corner">↗</span></div><div class="experiment-caption"><div><h3>Magnetic field</h3><p>A little pull goes a long way.</p></div><span class="category">Hover + feel</span></div></button></article>
+        <article class="experiment-card" data-experiment="elastic"><button class="experiment-open" data-open="elastic" aria-label="Open Elastic energy experiment"><div class="experiment-art elastic-art"><div class="elastic-sculpture" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="art-hint">Some things just have a little more give.</span><span class="open-corner">↗</span></div><div class="experiment-caption"><div><h3>Elastic energy</h3><p>Stretch your expectations.</p></div><span class="category">Drag + release</span></div></button></article>
+        <article class="experiment-card" data-experiment="ripple"><button class="experiment-open" data-open="ripple" aria-label="Open Ripple effect experiment"><div class="experiment-art ripple-art"><div class="ripple-sculpture" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><span class="art-hint">One small action. A whole new rhythm.</span><span class="open-corner">↗</span></div><div class="experiment-caption"><div><h3>Ripple effect</h3><p>Every action has a reaction.</p></div><span class="category">Click + repeat</span></div></button></article>
+        <article class="experiment-card" data-experiment="type"><button class="experiment-open" data-open="type" aria-label="Open Type in motion experiment"><div class="experiment-art type-art"><div class="type-sculpture" aria-hidden="true">Aa<span>!</span></div><span class="art-hint">Give your words a little personality.</span><span class="open-corner">↗</span></div><div class="experiment-caption"><div><h3>Type in motion</h3><p>Words with something to say.</p></div><span class="category">Type + play</span></div></button></article>
+      </div>
+      <div class="carousel-bottom wrap"><span>← Drag to discover →</span><div class="slide-dots" role="group" aria-label="Go to experiment"><button class="active" data-slide="0" aria-label="Magnetic field" aria-pressed="true"></button><button data-slide="1" aria-label="Elastic energy" aria-pressed="false"></button><button data-slide="2" aria-label="Ripple effect" aria-pressed="false"></button><button data-slide="3" aria-label="Type in motion" aria-pressed="false"></button></div><span>Made for your mouse. And your thumbs.</span></div>
+    </section>
+
+    <section class="tactile-section section-pad wrap" id="buttons" aria-labelledby="tactile-title"><div class="tactile-copy"><p class="section-kicker">It’s all in the details</p><h2 id="tactile-title">Even the buttons<br>have a personality.</h2><p>That satisfying press. That unexpected response.<br>Small details make digital things feel human.</p><a href="#about" class="inline-link">The thinking behind the feeling <span>↗</span></a></div><div class="button-lab" data-ui><div class="lab-heading"><span>Go on. Press something.</span><span class="status-dot"></span></div><div class="button-samples"><div class="sample"><button class="demo-button press-button" id="press-button">Push my buttons <span>↗</span></button><span>That tactile feeling</span></div><div class="sample"><button class="demo-button fill-button" id="fill-button"><span>Hold that thought</span><span class="fill-progress"></span></button><span id="hold-description">Press and hold to fill</span></div><div class="sample"><button class="demo-button like-button" id="like-button" aria-pressed="false"><span class="heart">♡</span> <span id="like-label">A little love</span></button><span>Some clicks just click</span></div><div class="sample"><button class="demo-button confetti-button" id="confetti-button">Make it a moment <span>✳</span></button><span>A little cause for celebration</span></div></div><div class="lab-footer"><span id="lab-status" aria-live="polite">No wrong buttons here.</span><button id="reset-buttons" class="text-button">Reset ↺</button></div></div></section>
+
+    <section class="about-section section-pad" id="about"><div class="wrap about-layout"><div><p class="section-kicker">The idea behind the play</p><h2>The web should<br>make you feel.</h2></div><div class="about-text"><p>Not every interaction needs a reason. Sometimes, a little curiosity is enough.</p><p>Kinetic is an independent collection of experiments in movement, feedback, and the space between a click and a smile. Everything here is made to be touched, tested, and tried again.</p><details><summary>Can I play on my phone?<span>+</span></summary><p>Absolutely. Swipe through the collection, drag the sculpture with a finger, and tap any experiment to open it. Every interaction works with touch and keyboard, too.</p></details><details><summary>Prefer a little less motion?<span>+</span></summary><p>Use the motion switch below to pause ambient animation. Your device’s reduced-motion preference is respected automatically. All controls stay available.</p></details><button class="motion-switch" id="motion-switch" role="switch" aria-checked="true"><span class="switch-track"><i></i></span><span id="motion-label">Motion is on</span></button></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-top"><div><h2>Stay curious.<br>Keep playing.</h2><a class="button dark magnetic" href="#playground">Back to the playground <span>↗</span></a></div><div class="footer-aside"><svg class="footer-star" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 1v30M1 16h30M5.4 5.4l21.2 21.2M5.4 26.6 26.6 5.4"/></svg><p>A small corner of the internet.<br>A whole lot of possibility.</p></div></div><div class="wrap footer-meta"><span>© 2026 Kinetic. An interaction playground.</span><a href="#main">Made to move you. ↑</a></div><div class="footer-wordmark" aria-hidden="true">kinetic</div></footer>
+
+  <dialog id="experiment-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><div><span class="section-kicker">Your curiosity looks good on you</span><h2 id="dialog-title">Magnetic field</h2></div><button id="close-dialog" class="round-button" aria-label="Close experiment">×</button></div><p id="dialog-description"></p><div id="dialog-content"></div><div class="dialog-footer"><span>Take your time. There’s no score.</span><button class="text-button" id="dialog-reset">Start fresh ↺</button></div></dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+</body>
+</html>

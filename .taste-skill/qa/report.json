@@ -1,0 +1,2554 @@
+{
+ "url": "C:/Users/User/Documents/ChatGPT/Website builder/kinetic-playground/dist/index.html",
+ "at": "2026-10-27T02:50:01.081Z",
+ "allow": [
+  "emoji",
+  "eyebrow",
+  "outlined-box"
+ ],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.43,
+    0.52,
+    0.51,
+    0.99,
+    0.99
+   ],
+   "motion": {
+    "elements": 24,
+    "css": 3,
+    "transitions": 21,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 3915,
+     "screens": 4.4,
+     "words": 397,
+     "img": 0,
+     "video": 0,
+     "canvas": 2,
+     "svg": 6,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "✳",
+      "♡"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Made to be played with.",
+     "words": 5,
+     "chars": 23,
+     "lines": 2,
+     "size": 109.4,
+     "vw": 7.6,
+     "font": "Archivo",
+     "weight": 550,
+     "tracking": -0.065,
+     "leading": 0.99,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.44,
+     "top": 233,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Made to be played with.",
+     "words": 5,
+     "lines": 2,
+     "size": 109.4,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "kinetic ®",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 2.4,
+      "font": "Archivo",
+      "weight": 750,
+      "tracking": -0.053,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.11,
+      "top": 38,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Made to be played with.",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 109.4,
+      "vw": 7.6,
+      "font": "Archivo",
+      "weight": 550,
+      "tracking": -0.065,
+      "leading": 0.99,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.44,
+      "top": 233,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 35,
+      "vw": 2.4,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 688,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 2.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.02,
+      "top": 927,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Small moves. Big feelings.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.24,
+      "top": 1149,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Aa!",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 140,
+      "vw": 9.7,
+      "font": "Archivo",
+      "weight": 800,
+      "tracking": -0.114,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 1403,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Even the buttons have a personality.",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 50.4,
+      "vw": 3.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 2033,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The web should make you feel.",
+      "words": 6,
+      "chars": 29,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 2599,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Stay curious. Keep playing.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 77.8,
+      "vw": 5.4,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.29,
+      "top": 3192,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "kinetic",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 417.6,
+      "vw": 29,
+      "font": "Archivo",
+      "weight": 650,
+      "tracking": -0.07,
+      "leading": 0.73,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3649,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 17,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Archivo",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      24,
+      26,
+      34,
+      35,
+      38,
+      50,
+      63,
+      78,
+      109,
+      140,
+      418
+     ],
+     "sizeCount": 22,
+     "notLoaded": [],
+     "body": {
+      "font": "Archivo",
+      "size": 15,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 63,
+     "max": {
+      "size": 417.6,
+      "vw": 29,
+      "font": "Archivo",
+      "text": "kinetic"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 19
+    },
+    "eyebrows": [
+     {
+      "text": "A little less static. A lot more alive.",
+      "above": "Made to be played with.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 186
+     },
+     {
+      "text": "Follow your curiosity",
+      "above": "Small moves. Big feelings.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1112
+     },
+     {
+      "text": "It’s all in the details",
+      "above": "Even the buttons have a personality.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1996
+     },
+     {
+      "text": "The idea behind the play",
+      "above": "The web should make you feel.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2562
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111313",
+     "bodyBgHsl": {
+      "h": 180,
+      "s": 0.06,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1b201a",
+       "top": 2442,
+       "hsl": {
+        "h": 110,
+        "s": 0.1,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#bcf8ae",
+       "top": 3102,
+       "hsl": {
+        "h": 109,
+        "s": 0.84,
+        "l": 0.83
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0a69f",
+       "share": 0.37
+      },
+      {
+       "color": "#b5bcb0",
+       "share": 0.21
+      },
+      {
+       "color": "#f2f3ed",
+       "share": 0.18
+      },
+      {
+       "color": "#182415",
+       "share": 0.15
+      },
+      {
+       "color": "#343b69",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#bcf8ae",
+      "hsl": {
+       "h": 109,
+       "s": 0.84,
+       "l": 0.83
+      },
+      "fg": "#182415"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 54,
+     "withShadow": 1,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to playground",
+      "Let’s play ↗",
+      "Explore the experiments ↗"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 10,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.32
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 3915,
+    "margins": {
+     "left": 71,
+     "right": 71
+    },
+    "sections": [
+     {
+      "sel": "section#playground.hero.wrap",
+      "tag": "section",
+      "top": 112,
+      "height": 788,
+      "words": 59,
+      "media": 1,
+      "middle": 140,
+      "heading": {
+       "text": "Made to be",
+       "size": 109,
+       "tag": "h1"
+      },
+      "left": 71,
+      "right": 71,
+      "textLeft": 71,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#experiments.experiments-section.section-pad",
+      "tag": "section",
+      "top": 992,
+      "height": 908,
+      "words": 84,
+      "media": 0,
+      "middle": 175,
+      "heading": {
+       "text": "Small moves.",
+       "size": 63,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 0,
+      "textLeft": 71,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#buttons.tactile-section.section-pad",
+      "tag": "section",
+      "top": 1900,
+      "height": 542,
+      "words": 69,
+      "media": 0,
+      "middle": 345,
+      "heading": {
+       "text": "Even the buttons",
+       "size": 50,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 101,
+      "textLeft": 71,
+      "textRight": 101,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about-section.section-pad",
+      "tag": "section",
+      "top": 2442,
+      "height": 660,
+      "words": 119,
+      "media": 0,
+      "middle": 282,
+      "heading": {
+       "text": "The web should",
+       "size": 63,
+       "tag": "h2"
+      },
+      "left": 71,
+      "right": 102,
+      "textLeft": 71,
+      "textRight": 102,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 3102,
+      "height": 813,
+      "words": 31,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "kinetic",
+       "size": 418,
+       "tag": "div"
+      },
+      "left": 59,
+      "right": 71,
+      "textLeft": 59,
+      "textRight": 71,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Made to be played with.",
+      "size": 109,
+      "top": 233,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 71,
+      "n": 9
+     },
+     {
+      "x": 753,
+      "n": 2
+     },
+     {
+      "x": 586,
+      "n": 1
+     },
+     {
+      "x": 1100,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 13,
+    "bodySize": 13,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 4,
+   "filled": [
+    0.43,
+    0.56,
+    0.85,
+    0.98
+   ],
+   "motion": {
+    "elements": 10,
+    "css": 3,
+    "transitions": 7,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 3697,
+     "screens": 3.6,
+     "words": 383,
+     "img": 0,
+     "video": 0,
+     "canvas": 2,
+     "svg": 6,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "✳",
+      "♡"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Made to be played with.",
+     "words": 5,
+     "chars": 23,
+     "lines": 2,
+     "size": 63.7,
+     "vw": 8.3,
+     "font": "Archivo",
+     "weight": 550,
+     "tracking": -0.065,
+     "leading": 0.99,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "left",
+     "widthRatio": 0.43,
+     "top": 306,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Made to be played with.",
+     "words": 5,
+     "lines": 2,
+     "size": 63.7,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "kinetic ®",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 34,
+      "vw": 4.4,
+      "font": "Archivo",
+      "weight": 750,
+      "tracking": -0.053,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 38,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Made to be played with.",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 63.7,
+      "vw": 8.3,
+      "font": "Archivo",
+      "weight": 550,
+      "tracking": -0.065,
+      "leading": 0.99,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 306,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 35,
+      "vw": 4.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 716,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 38,
+      "vw": 4.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 1051,
+      "tag": "b",
+      "kind": "heading"
+     },
+     {
+      "text": "Small moves. Big feelings.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 42,
+      "vw": 5.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1248,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Aa!",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 140,
+      "vw": 18.2,
+      "font": "Archivo",
+      "weight": 800,
+      "tracking": -0.114,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.28,
+      "top": 1446,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Even the buttons have a personality.",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 2031,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The web should make you feel.",
+      "words": 6,
+      "chars": 29,
+      "lines": 2,
+      "size": 42,
+      "vw": 5.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 2523,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Stay curious. Keep playing.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 3179,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "kinetic",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 222.7,
+      "vw": 29,
+      "font": "Archivo",
+      "weight": 650,
+      "tracking": -0.07,
+      "leading": 0.73,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.97,
+      "top": 3555,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 17,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 1,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Archivo",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      24,
+      26,
+      34,
+      35,
+      36,
+      38,
+      42,
+      48,
+      64,
+      140,
+      223
+     ],
+     "sizeCount": 21,
+     "notLoaded": [],
+     "body": {
+      "font": "Archivo",
+      "size": 15,
+      "leading": 1.65,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.5
+     },
+     "measureChars": 44,
+     "max": {
+      "size": 222.7,
+      "vw": 29,
+      "font": "Archivo",
+      "text": "kinetic"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 16
+    },
+    "eyebrows": [
+     {
+      "text": "A little less static. A lot more alive.",
+      "above": "Made to be played with.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 259
+     },
+     {
+      "text": "Scroll to get your hands on it",
+      "above": "✳",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 962
+     },
+     {
+      "text": "Follow your curiosity",
+      "above": "Small moves. Big feelings.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1211
+     },
+     {
+      "text": "It’s all in the details",
+      "above": "Even the buttons have a personality.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 1994
+     },
+     {
+      "text": "The idea behind the play",
+      "above": "The web should make you feel.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 13,
+      "top": 2486
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111313",
+     "bodyBgHsl": {
+      "h": 180,
+      "s": 0.06,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1b201a",
+       "top": 2391,
+       "hsl": {
+        "h": 110,
+        "s": 0.1,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#bcf8ae",
+       "top": 3089,
+       "hsl": {
+        "h": 109,
+        "s": 0.84,
+        "l": 0.83
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0a69f",
+       "share": 0.36
+      },
+      {
+       "color": "#b5bcb0",
+       "share": 0.22
+      },
+      {
+       "color": "#f2f3ed",
+       "share": 0.18
+      },
+      {
+       "color": "#182415",
+       "share": 0.15
+      },
+      {
+       "color": "#343b69",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#bcf8ae",
+      "hsl": {
+       "h": 109,
+       "s": 0.84,
+       "l": 0.83
+      },
+      "fg": "#182415"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 3,
+     "radius": "pill",
+     "height": 54,
+     "withShadow": 1,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to playground",
+      "Let’s play ↗",
+      "Explore the experiments ↗"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 10,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.29
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": false,
+     "height": 112,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 3697,
+    "margins": {
+     "left": 38,
+     "right": 38
+    },
+    "sections": [
+     {
+      "sel": "section#playground.hero.wrap",
+      "tag": "section",
+      "top": 112,
+      "height": 912,
+      "words": 59,
+      "media": 1,
+      "middle": 41,
+      "heading": {
+       "text": "Made to be",
+       "size": 64,
+       "tag": "h1"
+      },
+      "left": 38,
+      "right": 38,
+      "textLeft": 38,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#experiments.experiments-section.section-pad",
+      "tag": "section",
+      "top": 1116,
+      "height": 793,
+      "words": 71,
+      "media": 0,
+      "middle": 338,
+      "heading": {
+       "text": "Small moves.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 0,
+      "textLeft": 38,
+      "textRight": 0,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#buttons.tactile-section.section-pad",
+      "tag": "section",
+      "top": 1909,
+      "height": 482,
+      "words": 69,
+      "media": 0,
+      "middle": 59,
+      "heading": {
+       "text": "Even the buttons",
+       "size": 36,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 58,
+      "textLeft": 38,
+      "textRight": 58,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about-section.section-pad",
+      "tag": "section",
+      "top": 2391,
+      "height": 698,
+      "words": 119,
+      "media": 0,
+      "middle": 98,
+      "heading": {
+       "text": "The web should",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 38,
+      "right": 64,
+      "textLeft": 38,
+      "textRight": 64,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 3089,
+      "height": 607,
+      "words": 31,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "kinetic",
+       "size": 223,
+       "tag": "div"
+      },
+      "left": 26,
+      "right": 38,
+      "textLeft": 26,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Made to be played with.",
+      "size": 64,
+      "top": 306,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Ripple effect",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Every action has a reaction.",
+      "side": "right",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 38,
+      "n": 9
+     },
+     {
+      "x": 394,
+      "n": 3
+     },
+     {
+      "x": 750,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 13,
+    "bodySize": 13,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 5,
+   "filled": [
+    0.63,
+    0.61,
+    0.64,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 23,
+    "css": 3,
+    "transitions": 20,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 3618,
+     "screens": 4.3,
+     "words": 340,
+     "img": 0,
+     "video": 0,
+     "canvas": 2,
+     "svg": 6,
+     "sections": 4,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 2,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 2,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [
+      "✳",
+      "♡"
+     ],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Made to be played with.",
+     "words": 5,
+     "chars": 23,
+     "lines": 2,
+     "size": 62,
+     "vw": 15.9,
+     "font": "Archivo",
+     "weight": 550,
+     "tracking": -0.062,
+     "leading": 1.02,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.89,
+     "top": 159,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Made to be played with.",
+     "words": 5,
+     "lines": 2,
+     "size": 62,
+     "font": "Archivo"
+    },
+    "headings": [
+     {
+      "text": "kinetic ®",
+      "words": 2,
+      "chars": 9,
+      "lines": 1,
+      "size": 29,
+      "vw": 7.4,
+      "font": "Archivo",
+      "weight": 750,
+      "tracking": -0.062,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.34,
+      "top": 28,
+      "tag": "a",
+      "kind": "heading"
+     },
+     {
+      "text": "Made to be played with.",
+      "words": 5,
+      "chars": 23,
+      "lines": 2,
+      "size": 62,
+      "vw": 15.9,
+      "font": "Archivo",
+      "weight": 550,
+      "tracking": -0.062,
+      "leading": 1.02,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 159,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Small moves. Big feelings.",
+      "words": 4,
+      "chars": 26,
+      "lines": 2,
+      "size": 42,
+      "vw": 10.8,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.58,
+      "top": 1161,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Aa!",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 140,
+      "vw": 35.9,
+      "font": "Archivo",
+      "weight": 800,
+      "tracking": -0.114,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.55,
+      "top": 1326,
+      "tag": "div",
+      "kind": "heading"
+     },
+     {
+      "text": "Even the buttons have a personality.",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 37,
+      "vw": 9.5,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 1779,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "✳",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.05,
+      "top": 2202,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "♡",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.04,
+      "top": 2205,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "The web should make you feel.",
+      "words": 6,
+      "chars": 29,
+      "lines": 2,
+      "size": 42,
+      "vw": 10.8,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 2543,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Not every interaction needs a reason. Sometimes, a little curiosity is enough.",
+      "words": 12,
+      "chars": 78,
+      "lines": 3,
+      "size": 23,
+      "vw": 5.9,
+      "font": "Archivo",
+      "weight": 400,
+      "tracking": -0.035,
+      "leading": 1.45,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.89,
+      "top": 2657,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Stay curious. Keep playing.",
+      "words": 4,
+      "chars": 27,
+      "lines": 2,
+      "size": 49,
+      "vw": 12.6,
+      "font": "Archivo",
+      "weight": 500,
+      "tracking": -0.055,
+      "leading": 1.06,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.68,
+      "top": 3233,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "kinetic",
+      "words": 1,
+      "chars": 7,
+      "lines": 1,
+      "size": 113.1,
+      "vw": 29,
+      "font": "Archivo",
+      "weight": 650,
+      "tracking": -0.07,
+      "leading": 0.73,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 3546,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 11,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 1,
+     "centered": 2,
+     "medianWords": 4,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Archivo",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      18,
+      21,
+      22,
+      23,
+      29,
+      30,
+      37,
+      42,
+      49,
+      62,
+      113,
+      140
+     ],
+     "sizeCount": 20,
+     "notLoaded": [],
+     "body": {
+      "font": "Archivo",
+      "size": 13,
+      "leading": 1.75,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 7.4
+     },
+     "measureChars": 49,
+     "max": {
+      "size": 140,
+      "vw": 35.9,
+      "font": "Archivo",
+      "text": "Aa"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.05,
+     "smallText": 22
+    },
+    "eyebrows": [
+     {
+      "text": "A little less static. A lot more alive.",
+      "above": "Made to be played with.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 122
+     },
+     {
+      "text": "Follow your curiosity",
+      "above": "Small moves. Big feelings.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1130
+     },
+     {
+      "text": "It’s all in the details",
+      "above": "Even the buttons have a personality.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 1748
+     },
+     {
+      "text": "The idea behind the play",
+      "above": "The web should make you feel.",
+      "upper": false,
+      "tracked": false,
+      "mono": false,
+      "pill": false,
+      "size": 11,
+      "top": 2512
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#111313",
+     "bodyBgHsl": {
+      "h": 180,
+      "s": 0.06,
+      "l": 0.07
+     },
+     "dark": true,
+     "sectionBgs": [
+      {
+       "color": "#1a1d1c",
+       "top": 2007,
+       "hsl": {
+        "h": 160,
+        "s": 0.05,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#1b201a",
+       "top": 2436,
+       "hsl": {
+        "h": 110,
+        "s": 0.1,
+        "l": 0.11
+       }
+      },
+      {
+       "color": "#bcf8ae",
+       "top": 3168,
+       "hsl": {
+        "h": 109,
+        "s": 0.84,
+        "l": 0.83
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#a0a69f",
+       "share": 0.33
+      },
+      {
+       "color": "#b5bcb0",
+       "share": 0.24
+      },
+      {
+       "color": "#f2f3ed",
+       "share": 0.19
+      },
+      {
+       "color": "#182415",
+       "share": 0.14
+      },
+      {
+       "color": "#343b69",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#bcf8ae",
+      "hsl": {
+       "h": 109,
+       "s": 0.84,
+       "l": 0.83
+      },
+      "fg": "#182415"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 7,
+     "inHero": 2,
+     "radius": "pill",
+     "height": 54,
+     "withShadow": 1,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Skip to playground",
+      "Explore the experiments ↗"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 1,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 5,
+     "boxRadius": 10,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "canvas",
+      "ratio": 1
+     },
+     {
+      "type": "canvas",
+      "ratio": 0.39
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 86,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "archivo"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 3618,
+    "margins": {
+     "left": 22,
+     "right": 0
+    },
+    "sections": [
+     {
+      "sel": "section#playground.hero.wrap",
+      "tag": "section",
+      "top": 86,
+      "height": 894,
+      "words": 46,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Made to be",
+       "size": 62,
+       "tag": "h1"
+      },
+      "left": 22,
+      "right": 22,
+      "textLeft": 22,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#experiments.experiments-section.section-pad",
+      "tag": "section",
+      "top": 1054,
+      "height": 684,
+      "words": 44,
+      "media": 0,
+      "middle": 575,
+      "heading": {
+       "text": "Small moves.",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 0,
+      "textLeft": 22,
+      "textRight": 0,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#buttons.tactile-section.section-pad",
+      "tag": "section",
+      "top": 1738,
+      "height": 698,
+      "words": 69,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Even the buttons",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 38,
+      "textLeft": 22,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section#about.about-section.section-pad",
+      "tag": "section",
+      "top": 2436,
+      "height": 732,
+      "words": 119,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "The web should",
+       "size": 42,
+       "tag": "h2"
+      },
+      "left": 22,
+      "right": 38,
+      "textLeft": 22,
+      "textRight": 38,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "footer.footer",
+      "tag": "footer",
+      "top": 3168,
+      "height": 449,
+      "words": 20,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "kinetic",
+       "size": 113,
+       "tag": "div"
+      },
+      "left": 17,
+      "right": 22,
+      "textLeft": 17,
+      "textRight": 22,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Made to be played with.",
+      "size": 62,
+      "top": 159,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [
+     {
+      "text": "Some things just have a little more give.",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Elastic energy",
+      "side": "right",
+      "px": 0
+     },
+     {
+      "text": "Stretch your expectations.",
+      "side": "right",
+      "px": 0
+     }
+    ],
+    "edges": [
+     {
+      "x": 22,
+      "n": 11
+     },
+     {
+      "x": 336,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 12,
+    "bodySize": 13,
+    "stage": true,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "button-fx",
+   "width": 1440,
+   "message": "Buttons with shadow/glow.",
+   "fix": "Flat fill, one colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "22 different font sizes (10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 24, 26, 34, 35, 38, 50, 63, 78, 109, 140, 418).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "body-size",
+   "width": 1440,
+   "message": "Body text is 15px.",
+   "fix": "Body copy 16–20px.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "few-pictures",
+   "width": 1440,
+   "message": "Only 2 picture(s) on the page (0 photographs, footage or raster images, 2 interface fragments). Drawings in SVG do not count.",
+   "fix": "Find real pictures of the subject's world with scripts/assets.mjs (photographs, archival images, maps, engravings, footage), download them to assets/ and give them room: a hero picture, one per section that has a subject, a full-width band. At least four, usually six to twelve."
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 1440,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "19 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 1440,
+   "message": "Large text lies under another element at some scroll position: \"kinetic ®\" (screen 1, 100% hidden); \"Made to be played with.\" (screen 1, 100% hidden); \"Drag your curiosity\" (screen 2, 100% hidden); \"Click into something new\" (screen 2, 100% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "edge-text",
+   "width": 768,
+   "message": "2 text block(s) sit within 16px of the screen edge: \"Ripple effect\" (0px from the right); \"Every action has a reaction.\" (0px from the right)",
+   "fix": "Keep text inside the page margin (16–32px or more). Only display type deliberately bled past the edge may touch it.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "body-size",
+   "width": 390,
+   "message": "Body text is 13px (the size most of the running text is set in).",
+   "fix": "Body copy 16–20px. Map small sizes from blueprints onto your body step."
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 390,
+   "message": "The margins differ: 22px on the left, 0px on the right, at 390px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\desktop-page-01.jpg",
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\User\\Documents\\ChatGPT\\Website builder\\kinetic-playground\\.taste-skill\\qa\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
