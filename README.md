@@ -55,3 +55,9 @@ Tracking adds explicitly illustrative arrival/scan details, copyable tracking ID
 Verified desktop and mobile flow completion, blocked empty fields and invalid postcode, edit retention, quote updates (4kg medium everyday = RM16.90), label generation, tracking scan changes and copying. Responsive inspection at 1440/768/390px has zero blocking findings with the existing intentional design allowances.
 
 The parcel's lid animation now uses thin rigid panels on fixed hinges, with staged outer/inner flap timing and reversed closing order. Flaps finish folded outward; tape follows the panel normal. Contents remain present and are naturally occluded by closed lids. Fixed framing avoids zooming the entire carton, while a modest pitch change reveals the interior. Reversing a moving lid preserves its position and eases its velocity. Regression checks cover finite endpoints, staged timing, unchanged scale, continuous reversal and reduced-motion states.
+
+## Weight slider interaction
+
+`weight-slider.js` and `weight-slider.css` enhance the original native range with a filled ruler, enlarged grip, following weight bubble, integer tick feedback, release bounce, quote response and a brief parcel preview compression. Optional tones use the existing sound toggle. Half-kilogram increment/decrement buttons and 1/5/10/20kg presets share the same input and quote calculation. All controls remain keyboard accessible; the native range retains its label, bounds and step. Programmatic quote updates synchronize the visual position. Reduced-motion mode skips JavaScript animation and cancels active effects.
+
+Verified actual pointer dragging, keyboard arrows/Home/End, half-kilogram buttons, presets, disabled endpoint controls and reduced-motion selection. Default Medium/Everyday route at 10.5kg calculates RM30.90; at 20kg RM48.90. Checked mobile layout and console with no errors.
