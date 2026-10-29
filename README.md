@@ -43,3 +43,13 @@ The van keeps a fixed pose during idle and hover; its service card uses a small,
 `dist/interactions.css` animates all three native select pickers, their arrows and option highlights, plus FAQ disclosures and the mobile navigation. Native selection, keyboard handling, and form events are preserved. Browsers supporting `appearance: base-select` receive the styled picker; older browsers retain their native picker. Reduced-motion settings disable these transitions.
 
 Regression check: `node tests/model-motion.cjs`. Browser checks cover all three select pickers, keyboard selection, Escape, pointer selection, route swapping, quote updates, FAQ expansion, mobile navigation and reduced-motion durations.
+
+## Delivery experience upgrade
+
+The homepage prioritizes sending and tracking; optional size, tape and care controls are under Customize your parcel. The kraft model has subtle material grain and folded-edge shading while retaining the stable van pose.
+
+`planner.js` adds a four-step sender, recipient, parcel and review flow. Required fields, five-digit postcodes, weight bounds and collection dates are validated; sample details are available. Back/edit preserves values, and package changes synchronize the existing calculator. Final confirmation generates a demo SVG label with the entered route/address details. Inputs stay in memory in the current browser tab; no data is sent to a courier or stored remotely.
+
+Tracking adds explicitly illustrative arrival/scan details, copyable tracking ID and delay guidance. The sending guide covers sample coverage, packing, restricted-item checks and preparing a support request. Actual coverage, support and claims policies must come from a booked courier.
+
+Verified desktop and mobile flow completion, blocked empty fields and invalid postcode, edit retention, quote updates (4kg medium everyday = RM16.90), label generation, tracking scan changes and copying. Responsive inspection at 1440/768/390px has zero blocking findings with the existing intentional design allowances.

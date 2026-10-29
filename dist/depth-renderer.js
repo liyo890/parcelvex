@@ -12,7 +12,7 @@ class ParcelDepthRenderer {
     const g=this.gl;
     const shader=(type,source)=>{const s=g.createShader(type);g.shaderSource(s,source);g.compileShader(s);if(!g.getShaderParameter(s,g.COMPILE_STATUS))throw new Error(g.getShaderInfoLog(s));return s;};
     const vertex=shader(g.VERTEX_SHADER,'attribute vec3 position; attribute vec2 uv; varying vec2 texUV; void main(){gl_Position=vec4(position,1.0);texUV=uv;}');
-    const fragment=shader(g.FRAGMENT_SHADER,'precision mediump float; varying vec2 texUV; uniform vec4 color; uniform sampler2D image; uniform float textured; void main(){vec4 t=texture2D(image,texUV);gl_FragColor=mix(color,vec4(mix(color.rgb,t.rgb,t.a),1.0),textured);}');
+    const fragment=shader(g.FRAGMENT_SHADER,'precision highp float; varying vec2 texUV; uniform vec4 color; uniform sampler2D image; uniform float textured; void main(){vec4 t=texture2D(image,texUV);vec3 base=color.rgb;if(base.r>base.b*1.25&&base.r>base.g*1.12){float grain=fract(sin(dot(floor(texUV*360.0),vec2(12.9898,78.233)))*43758.5453)-0.5;float edge=min(min(texUV.x,1.0-texUV.x),min(texUV.y,1.0-texUV.y));base+=grain*0.018;base*=0.96+0.04*smoothstep(0.0,0.018,edge);}gl_FragColor=mix(vec4(base,1.0),vec4(mix(base,t.rgb,t.a),1.0),textured);}');
     this.program=g.createProgram();g.attachShader(this.program,vertex);g.attachShader(this.program,fragment);g.linkProgram(this.program);
     if(!g.getProgramParameter(this.program,g.LINK_STATUS))throw new Error(g.getProgramInfoLog(this.program));
     g.deleteShader(vertex);g.deleteShader(fragment);g.useProgram(this.program);
