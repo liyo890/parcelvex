@@ -33,7 +33,7 @@
   class Illustration {
     constructor(canvas,kind='hero'){
       this.canvas=canvas;try{this.renderer=new ParcelDepthRenderer(canvas);}catch{canvas.classList.add('model-unavailable');canvas.insertAdjacentHTML('afterend','<p class="model-fallback">3D preview unavailable on this device. Parcel planning and tracking are still available.</p>');}this.kind=kind;this.yaw=-.58;this.pitch=.34;this.open=0;this.w=1;this.h=1;this.visible=true;this.hover=0;this.desiredOpen=kind==='packing'?1:0;
-      this.lastRender=0;this.openVelocity=0;this.phase=0;this.hoverBlend=0;this.interacting=false;
+      this.seal=1;this.reseal=false;this.sealPhase='sealed';this.lastRender=0;this.openVelocity=0;this.phase=0;this.hoverBlend=0;this.interacting=false;
       new ResizeObserver(()=>this.resize()).observe(canvas);
       canvas.addEventListener('modelrestore',()=>{this.render(performance.now());scheduleModels();});
       new IntersectionObserver(([e])=>{this.visible=e.isIntersecting;if(e.isIntersecting){this.render(performance.now());scheduleModels();}}).observe(canvas);
@@ -57,7 +57,7 @@
       // Reversing progress closes the inner flaps first, then the outer pair.
       return [fold(0,.64,3.22),fold(.08,.70,3.02),fold(.36,.94,3.12),fold(.42,1,3.08)];
     }
-    parcel(scale,tape,fragile,opening=0,offset=[0,0,0]){
+    parcel(scale,tape,fragile,opening=0,offset=[0,0,0],seal=1){
       const [ox,oy,oz]=offset,w=1.22*scale,h=.93*scale,d=.94*scale;
       const p=(x,y,z)=>[x+ox,y+oy,z+oz];const cardboard='#c69b6e';
       this.face([p(-w,-h,d),p(w,-h,d),p(w,h,d),p(-w,h,d)],cardboard,[0,0,1]);
@@ -73,6 +73,7 @@
       // Contents exist throughout the motion; the closed lids naturally occlude them.
       this.box(ox,oy-.48*scale,oz,.82*scale,.68*scale,.82*scale,tape);
       const angles=this.flapAngles(opening),thickness=.018*scale;
+      const bounded=v=>Math.max(0,Math.min(1,v)),zipTop=bounded((seal-.16)/.68),tapeEnd=-w+2*w*zipTop;
       // A lid is a rigid, thin panel rotating about a fixed carton edge.
       const panel=(points,normal,color)=>{
         const underside=points.map(v=>v.map((n,i)=>n-normal[i]*thickness));
@@ -87,8 +88,8 @@
         panel(pts,n,'#d8b182');
         const tw=.19*scale,offset=v=>v.map((x,i)=>x+n[i]*.008*scale);
         // Seal along the shared free edges (z=0), rather than crossing the seam.
-        // The two halves separate as though the tape was slit before opening.
-        this.face([at(-w,d-tw),at(w,d-tw),at(w,d),at(-w,d)].map(offset),tape,n,null,true);
+        // Tape withdraws completely before the lids can open.
+        if(zipTop>0)this.face([at(-w,d-tw),at(tapeEnd,d-tw),at(tapeEnd,d),at(-w,d)].map(offset),tape,n,null,true);
       };
       const minor=(right,angle)=>{
         const sign=right?1:-1,c=Math.cos(angle),sin=Math.sin(angle),length=w*.79;
@@ -98,8 +99,11 @@
       minor(true,angles[2]);minor(false,angles[3]);major(true,angles[0]);major(false,angles[1]);
       const tw=.19*scale;
       // Matching wrap-down strips on the left/right faces form one sealing band.
-      this.face([p(w+.008,-h,-tw),p(w+.008,-h,tw),p(w+.008,h,tw),p(w+.008,h,-tw)],tape,[1,0,0]);
-      this.face([p(-w-.008,-h,tw),p(-w-.008,-h,-tw),p(-w-.008,h,-tw),p(-w-.008,h,tw)],tape,[-1,0,0]);
+      const rightLength=bounded((seal-.84)/.16),leftLength=bounded(seal/.16);
+      if(rightLength>0)this.face([p(w+.008,h-2*h*rightLength,-tw),p(w+.008,h-2*h*rightLength,tw),p(w+.008,h,tw),p(w+.008,h,-tw)],tape,[1,0,0]);
+      if(leftLength>0)this.face([p(-w-.008,-h,tw),p(-w-.008,-h,-tw),p(-w-.008,-h+2*h*leftLength,-tw),p(-w-.008,-h+2*h*leftLength,tw)],tape,[-1,0,0]);
+      // The small press head visibly travels across the top seam while tape is applied.
+      if(seal>.16&&seal<.84&&opening===0){this.box(ox+tapeEnd,oy+h+.085*scale,oz,.14*scale,.12*scale,.48*scale,'#30472a');this.box(ox+tapeEnd,oy+h+.155*scale,oz,.065*scale,.035*scale,.27*scale,'#e5ffdc');}
       this.face([p(.33*scale,.52*scale,d+.018),p(1.04*scale,.52*scale,d+.018),p(1.04*scale,-.2*scale,d+.018),p(.33*scale,-.2*scale,d+.018)],'#f5f2e5',[0,0,1],labelTexture);
       if(fragile)this.face([p(-1.06*scale,.46*scale,d+.02),p(-.38*scale,.46*scale,d+.02),p(-.38*scale,-.19*scale,d+.02),p(-1.06*scale,-.19*scale,d+.02)],'#efb4c5',[0,0,1],careTexture);
       // Folded edges and kraft reinforcement along the base.
@@ -116,7 +120,16 @@
     }
     render(now){if(!this.renderer||this.w<2||!this.visible)return;const hero=this.kind==='hero';const kind=hero?state.model:this.kind;const tape=hero||kind==='packing'||kind==='sizer'?state.tape:kind==='van'?'#9dbef3':kind==='care'?'#e5a4bc':'#b1e69e';
       const dt=Math.min(50,this.lastRender?now-this.lastRender:16.67);this.lastRender=now;
-      const ease=1-Math.exp(-dt/110),desired=hero?(state.open&&kind==='parcel'?1:0):this.desiredOpen;
+      const ease=1-Math.exp(-dt/110),requested=hero?(state.open&&kind==='parcel'?1:0):this.desiredOpen;
+      const oldSeal=this.seal;
+      if(!motion){this.seal=requested?0:1;this.reseal=false;}
+      else{
+        const sealTarget=requested||this.open>0||this.reseal?0:1;
+        const speed=dt/(sealTarget?1050:450);
+        this.seal+=Math.sign(sealTarget-this.seal)*Math.min(speed,Math.abs(sealTarget-this.seal));
+        if(this.seal===0&&this.reseal)this.reseal=false;
+      }
+      const desired=requested&&this.seal===0?1:0;
       if(motion){
         const distance=desired-this.open;
         const velocity=Math.abs(distance)<.0001?0:Math.sign(distance)/900;
@@ -124,12 +137,17 @@
         const previous=this.open;this.open=Math.max(0,Math.min(1,this.open+this.openVelocity*dt));
         if((desired-previous)*(desired-this.open)<=0||Math.abs(distance)<.0001){this.open=desired;this.openVelocity=0;}
       }else{this.open=desired;this.openVelocity=0;}
+      if(hero){
+        const phase=requested?(this.seal>0?'unsealing':this.open<1?'opening':'open'):(this.open>0?'folding':this.reseal?'unsealing':this.seal<1?'sealing':'sealed');
+        if(phase!==this.sealPhase){this.sealPhase=phase;this.canvas.dispatchEvent?.(new CustomEvent('parcel-seal-state',{detail:{phase}}));}
+        if(oldSeal<1&&this.seal===1)this.canvas.dispatchEvent?.(new Event('parcel-sealed'));
+      }
       // The van stays rigid. Only explicit hero drag/keyboard input rotates it.
       // Other illustrations ease to hover targets; phase stops rather than snapping on pause.
       const hoverTarget=motion&&kind!=='van'?this.hover:0;
       this.hoverBlend=motion?this.hoverBlend+(hoverTarget-this.hoverBlend)*ease:0;
       if(Math.abs(hoverTarget-this.hoverBlend)<.001)this.hoverBlend=hoverTarget;
-      if(motion&&!state.paused&&!this.interacting&&kind!=='van'&&this.open===0&&desired===0)this.phase+=dt*.0003;
+      if(motion&&!state.paused&&!this.interacting&&kind!=='van'&&this.open===0&&desired===0&&this.seal===1)this.phase+=dt*.0003;
       this.renderYaw=this.yaw+(kind==='van'?0:Math.sin(this.phase)*.1)+(hero?0:this.hoverBlend*.17);
       const framing=hero&&kind==='parcel'||kind==='packing';
       this.renderPitch=this.pitch+this.open*.28;
@@ -138,7 +156,7 @@
       const ground=kind==='van'?-.98:-.93*(hero||kind==='sizer'?sizes[state.size].scale:.86)-.015;
       const floor=[];for(let i=0;i<48;i++){const a=i/48*Math.PI*2;floor.push([Math.cos(a)*1.7,ground,Math.sin(a)*1.05]);}
       this.face(floor,hero?'#202b1b':kind==='packing'?'#263321':kind==='sizer'?'#202b1b':kind==='van'?'#8eaddb':kind==='care'?'#cd9eac':'#a7ce96',[0,1,0],null,true);
-      if(kind==='van')this.van(tape);else this.parcel(hero||kind==='sizer'?sizes[state.size].scale:.86,tape,hero||kind==='sizer'?state.fragile:kind==='care'||kind==='packing'&&this.desiredOpen===0,this.open);
+      if(kind==='van')this.van(tape);else this.parcel(hero||kind==='sizer'?sizes[state.size].scale:.86,tape,hero||kind==='sizer'?state.fragile:kind==='care'||kind==='packing'&&this.desiredOpen===0,this.open,[0,0,0],this.seal);
       this.renderer.draw(this.faces,this.w,this.h);
     }
   }
@@ -146,13 +164,17 @@
   const packingModel=new Illustration($('#packing-canvas'),'packing'),sizerModel=new Illustration($('#sizer-canvas'),'sizer');
   const illustrations=[hero,packingModel,sizerModel,...$$('.service-canvas').map(c=>new Illustration(c,c.dataset.scene))];
   let modelFrame=0;
-  const needsFrame=i=>{const kind=i.kind==='hero'?state.model:i.kind;return i.renderer&&!i.renderer.lost&&i.visible&&motion&&((!state.paused&&kind!=='van'&&!i.interacting)||Math.abs(i.open-(i.kind==='hero'?(state.open&&state.model==='parcel'?1:0):i.desiredOpen))>.00001||(kind!=='van'&&Math.abs(i.hoverBlend-i.hover)>.001));};
+  const needsFrame=i=>{const kind=i.kind==='hero'?state.model:i.kind,requested=i.kind==='hero'?(state.open&&state.model==='parcel'?1:0):i.desiredOpen;return i.renderer&&!i.renderer.lost&&i.visible&&motion&&((!state.paused&&kind!=='van'&&!i.interacting&&i.open===0&&requested===0&&i.seal===1)||i.reseal||Math.abs(i.seal-(requested?0:1))>.00001||Math.abs(i.open-requested)>.00001||(kind!=='van'&&Math.abs(i.hoverBlend-i.hover)>.001));};
   function scheduleModels(){if(!modelFrame&&!document.hidden&&illustrations.some(needsFrame))modelFrame=requestAnimationFrame(frame);}
   function frame(now){modelFrame=0;if(document.hidden)return;illustrations.forEach(i=>{if(needsFrame(i))i.render(now);});scheduleModels();}
   const renderAll=()=>{illustrations.forEach(i=>i.render(performance.now()));scheduleModels();};
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(modelFrame);modelFrame=0;}else renderAll();});
   function setModel(model){state.model=model;if(model==='van')state.open=false;$$('[data-model]').forEach(b=>{const active=b.dataset.model===model;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});$('.stage-heading>span').innerHTML=`<i class="status-dot"></i>${model==='parcel'?'Your parcel, in 3D':'Good things, on the road'}`;$('#model-hint').textContent=model==='parcel'?'Drag to turn it. Click to unpack it.':'A little more get-up-and-go. Drag to explore.';$('#model-size').textContent=model==='parcel'?`${sizes[state.size].name} · ${sizes[state.size].dims}`:'Made for the little journeys.';$('#open-parcel').setAttribute('aria-pressed',String(state.open));$('#open-parcel').innerHTML=model==='van'?'Unpack a parcel <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>':state.open?'Pack it up <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 7-10 10M7 7v10h10"/></svg>':'Unpack it <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>';$('#parcel-canvas').setAttribute('aria-label',model==='parcel'?'Interactive 3D cardboard parcel. Drag or use arrow keys to rotate. Press Space to open the parcel.':'Interactive 3D delivery van. Drag or use arrow keys to rotate.');hero.yaw=-.58;renderAll();}
   function toggleOpen(force){if(state.model!=='parcel')setModel('parcel');state.open=typeof force==='boolean'?force:!state.open;$('#open-parcel').setAttribute('aria-pressed',String(state.open));$('#open-parcel').innerHTML=state.open?'Pack it up <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 7-10 10M7 7v10h10"/></svg>':'Unpack it <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>';renderAll();tone(state.open?540:320,.13);if(state.open)toast('Good things inside. A little care outside.');}
+  const sealDescriptions={unsealing:'Releasing the tape…',opening:'Unfolding the lids…',open:'Ready to pack. Close it, then zip to seal.',folding:'Folding the lids into place…',sealing:'Zipping the tape along the seam…',sealed:'Sealed with care. Drag to turn it.'};
+  hero.canvas.addEventListener('parcel-seal-state',e=>{if(state.model==='parcel')$('#model-hint').textContent=sealDescriptions[e.detail.phase];$('#zip-parcel').classList.toggle('sealing',e.detail.phase==='sealing');});
+  hero.canvas.addEventListener('parcel-sealed',()=>{if(motion){hero.canvas.animate([{transform:'translateY(0) scaleY(1)'},{transform:'translateY(2px) scaleY(.985)',offset:.35},{transform:'translateY(0) scaleY(1)'}],{duration:260,easing:'ease-out'});}tone(720,.07);});
+  $('#zip-parcel').addEventListener('click',()=>{if(state.model!=='parcel')setModel('parcel');hero.reseal=motion;toggleOpen(false);$('#model-hint').textContent=motion?'Close. Zip. Ready to go.':sealDescriptions.sealed;renderAll();});
   $$('[data-model]').forEach(b=>b.addEventListener('click',()=>{setModel(b.dataset.model);tone(400);}));$('#open-parcel').addEventListener('click',()=>toggleOpen());
   function setSize(size){state.size=size;$$('[data-size]').forEach(b=>{const active=b.dataset.size===size;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});$(`input[name="parcel-size"][value="${size}"]`).checked=true;$('#model-size').textContent=`${sizes[size].name} · ${sizes[size].dims}`;$('#dimension-caption').textContent=sizes[size].dims;renderAll();updateQuote();}
   $$('[data-size]').forEach(b=>b.addEventListener('click',()=>{setSize(b.dataset.size);tone(440);}));

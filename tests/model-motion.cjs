@@ -33,3 +33,20 @@ for(const f of lidTape){const xs=f.points.map(p=>p[0]),zs=f.points.map(p=>p[2]);
 const wraps=surfaces.filter(f=>f.color==='#bcf8ae'&&f.normal&&Math.abs(f.normal[0])===1&&Math.max(...f.points.map(p=>p[1]))>.9);
 assert.equal(wraps.length,2,'Tape must continue down the left and right carton faces');
 console.log('PASS: tape follows the main lid seam and wraps onto matching side faces.');
+context.motion=true;context.state.model='parcel';context.state.open=false;
+const sealed=create('hero');sealed.render(1000);sealed.reseal=true;
+let sawEmpty=false,sawPartial=false;
+for(let t=1016;t<=3300;t+=16){sealed.render(t);if(sealed.seal===0)sawEmpty=true;if(sawEmpty&&sealed.seal>0&&sealed.seal<1)sawPartial=true;assert.equal(sealed.open,0,'Zip replay must keep the lids closed');}
+assert(sawEmpty&&sawPartial&&sealed.seal===1,'Independent replay must release, progressively seal, then finish');
+context.state.open=true;for(let t=3316;t<=5200;t+=16){sealed.render(t);if(sealed.open>0)assert.equal(sealed.seal,0,'Lids must wait until tape is released');}
+assert.equal(sealed.open,1);assert.equal(sealed.sealPhase,'open');
+context.state.open=false;for(let t=5216;t<=7800;t+=16){sealed.render(t);if(sealed.open>0)assert.equal(sealed.seal,0,'Tape must wait for the lids to close');}
+assert.equal(sealed.seal,1);assert.equal(sealed.sealPhase,'sealed');
+console.log('PASS: independent seal replay, progressive tape, unseal-before-open, close-before-seal, final state labels.');
+surfaces.length=0;tapeModel.parcel(1,'#bcf8ae',false,0,[0,0,0],.5);
+const partial=surfaces.filter(f=>f.color==='#bcf8ae'&&f.double);
+assert.equal(partial.length,2);for(const f of partial){assert(Math.max(...f.points.map(p=>p[0]))<.001,'The tape front must stop halfway along the seam');}
+assert(surfaces.some(f=>f.color==='#30472a'),'A visible press head must follow the tape front');
+context.motion=false;sealed.reseal=true;sealed.seal=.4;sealed.render(8000);assert.equal(sealed.seal,1);assert.equal(sealed.reseal,false);
+context.state.open=true;sealed.render(8016);assert.equal(sealed.seal,0);assert.equal(sealed.open,1);
+console.log('PASS: halfway tape geometry, travelling press head, instant reduced-motion sealing endpoints.');
