@@ -8,19 +8,18 @@
   // Decorative overlay never replaces the native range's keyboard/touch semantics.
   const handle=root.querySelector('.weight-handle'),fill=root.querySelector('.weight-fill'),bubble=root.querySelector('.weight-bubble b'),output=document.querySelector('#weight-value'),price=document.querySelector('#quote-price');
   root.querySelector('[data-delta="-0.5"]').innerHTML='<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>';
+  const bubbleCounter=window.ParcelWeightDigits.attach(bubble,+input.value);
   let travel=0,previous=+input.value,lastTick=Math.floor(previous),dragging=false,frame=0,animations=[];
   const moving=()=>!document.body.classList.contains('motion-off')&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
   function animate(el,frames,options){if(!moving())return;const animation=el.animate(frames,{duration:180,easing:'ease-out',...options});animations.push(animation);animation.finished.catch(()=>{}).finally(()=>animations=animations.filter(a=>a!==animation));}
   function draw(){frame=0;const value=+input.value,p=(value-.5)/19.5;
-    handle.style.transform=`translate3d(${p*travel}px,-50%,0)`;fill.style.transform=`scaleX(${p})`;bubble.textContent=String(value);
+    handle.style.transform=`translate3d(${p*travel}px,-50%,0)`;fill.style.transform=`scaleX(${p})`;bubbleCounter.set(value);
     input.setAttribute('aria-valuetext',`${value} kilograms`);
     root.querySelectorAll('[data-weight]').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.weight===value)));
     root.querySelector('[data-delta="-0.5"]').disabled=value<=.5;root.querySelector('[data-delta="0.5"]').disabled=value>=20;
     const changed=value!==previous;
     if(changed){
-      const direction=value>previous?1:-1;
       if(Math.floor(value)!==lastTick){api.tone(260+p*420,.025);lastTick=Math.floor(value);animate(root.querySelector('.weight-knob svg'),[{transform:'scale(1)'},{transform:'scale(.72)',offset:.5},{transform:'scale(1)'}],{duration:100});}
-      if(!dragging){animate(output,[{transform:`translateY(${direction*5}px)`,opacity:.6},{transform:'translateY(0)',opacity:1}],{duration:150});}
       previous=value;
     }
   }
