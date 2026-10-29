@@ -86,7 +86,9 @@
         const pts=[at(-w,0),at(w,0),at(w,length),at(-w,length)];
         panel(pts,n,'#d8b182');
         const tw=.19*scale,offset=v=>v.map((x,i)=>x+n[i]*.008*scale);
-        this.face([at(-tw,0),at(tw,0),at(tw,length),at(-tw,length)].map(offset),tape,n,null,true);
+        // Seal along the shared free edges (z=0), rather than crossing the seam.
+        // The two halves separate as though the tape was slit before opening.
+        this.face([at(-w,d-tw),at(w,d-tw),at(w,d),at(-w,d)].map(offset),tape,n,null,true);
       };
       const minor=(right,angle)=>{
         const sign=right?1:-1,c=Math.cos(angle),sin=Math.sin(angle),length=w*.79;
@@ -95,8 +97,9 @@
       };
       minor(true,angles[2]);minor(false,angles[3]);major(true,angles[0]);major(false,angles[1]);
       const tw=.19*scale;
-      this.face([p(-tw,-h,d+.01),p(tw,-h,d+.01),p(tw,h,d+.01),p(-tw,h,d+.01)],tape,[0,0,1]);
-      this.face([p(tw,-h,-d-.01),p(-tw,-h,-d-.01),p(-tw,h,-d-.01),p(tw,h,-d-.01)],tape,[0,0,-1]);
+      // Matching wrap-down strips on the left/right faces form one sealing band.
+      this.face([p(w+.008,-h,-tw),p(w+.008,-h,tw),p(w+.008,h,tw),p(w+.008,h,-tw)],tape,[1,0,0]);
+      this.face([p(-w-.008,-h,tw),p(-w-.008,-h,-tw),p(-w-.008,h,-tw),p(-w-.008,h,tw)],tape,[-1,0,0]);
       this.face([p(.33*scale,.52*scale,d+.018),p(1.04*scale,.52*scale,d+.018),p(1.04*scale,-.2*scale,d+.018),p(.33*scale,-.2*scale,d+.018)],'#f5f2e5',[0,0,1],labelTexture);
       if(fragile)this.face([p(-1.06*scale,.46*scale,d+.02),p(-.38*scale,.46*scale,d+.02),p(-.38*scale,-.19*scale,d+.02),p(-1.06*scale,-.19*scale,d+.02)],'#efb4c5',[0,0,1],careTexture);
       // Folded edges and kraft reinforcement along the base.

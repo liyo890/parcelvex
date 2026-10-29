@@ -24,3 +24,12 @@ context.state.open=false;for(let t=2616;t<=4200;t+=16)carton.render(t);assert.eq
 context.state.open=true;for(let t=4216;t<=4500;t+=16)carton.render(t);const before=carton.open;context.state.open=false;carton.render(4516);assert(Math.abs(carton.open-before)<.025,'Reversing mid-animation must not jump');
 context.motion=false;carton.render(4532);assert.equal(carton.open,0,'Reduced motion must immediately show the requested state');
 console.log('PASS: staged flaps, finite open/close, stable scale, continuous reversal, reduced-motion endpoints.');
+const tapeModel=create('parcel'),surfaces=[];
+tapeModel.face=(points,color,normal,texture,double)=>surfaces.push({points,color,normal,texture,double});
+tapeModel.parcel(1,'#bcf8ae',false,0);
+const lidTape=surfaces.filter(f=>f.color==='#bcf8ae'&&f.double);
+assert.equal(lidTape.length,2,'Each outer flap needs one half of the sealing tape');
+for(const f of lidTape){const xs=f.points.map(p=>p[0]),zs=f.points.map(p=>p[2]);assert(Math.max(...xs)-Math.min(...xs)>2.4,'Tape must run along the entire x-axis lid seam');assert(Math.max(...zs)-Math.min(...zs)<.2,'Tape must remain narrow across the seam');assert(zs.some(z=>Math.abs(z)<.001),'Each tape half must reach the central seam');}
+const wraps=surfaces.filter(f=>f.color==='#bcf8ae'&&f.normal&&Math.abs(f.normal[0])===1&&Math.max(...f.points.map(p=>p[1]))>.9);
+assert.equal(wraps.length,2,'Tape must continue down the left and right carton faces');
+console.log('PASS: tape follows the main lid seam and wraps onto matching side faces.');

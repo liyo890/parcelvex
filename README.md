@@ -63,3 +63,5 @@ The parcel's lid animation now uses thin rigid panels on fixed hinges, with stag
 Verified actual pointer dragging, keyboard arrows/Home/End, half-kilogram buttons, presets, disabled endpoint controls and reduced-motion selection. Default Medium/Everyday route at 10.5kg calculates RM30.90; at 20kg RM48.90. Checked mobile layout and console with no errors.
 
 Weight heading and bubble numbers use a 190ms directional roll, with a fixed unit and tabular numeral window. A running transition adopts the latest target instead of queuing old values; reduced motion cancels layers and shows the current number immediately. Verified rapid preset changes keep the latest value and reduced-motion changes leave zero outgoing layers.
+
+The sealing tape now follows the outer flaps' shared free-edge seam (x direction at z=0), continuing down the left and right carton faces. The previous perpendicular top strip and front/back decorative strips were removed. Opening illustrates tape already slit along the lid seam, with each top half attached to its own moving flap. Geometry regression checks verify seam alignment and matching side wraps.
