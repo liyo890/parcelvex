@@ -33,7 +33,7 @@
   class Illustration {
     constructor(canvas,kind='hero'){
       this.canvas=canvas;try{this.renderer=new ParcelDepthRenderer(canvas);}catch{canvas.classList.add('model-unavailable');canvas.insertAdjacentHTML('afterend','<p class="model-fallback">3D preview unavailable on this device. Parcel planning and tracking are still available.</p>');}this.kind=kind;this.yaw=-.58;this.pitch=.34;this.open=0;this.w=1;this.h=1;this.visible=true;this.hover=0;this.desiredOpen=kind==='packing'?1:0;
-      this.lastRender=0;this.phase=0;this.hoverBlend=0;this.interacting=false;
+      this.lastRender=0;this.openVelocity=0;this.phase=0;this.hoverBlend=0;this.interacting=false;
       new ResizeObserver(()=>this.resize()).observe(canvas);
       canvas.addEventListener('modelrestore',()=>{this.render(performance.now());scheduleModels();});
       new IntersectionObserver(([e])=>{this.visible=e.isIntersecting;if(e.isIntersecting){this.render(performance.now());scheduleModels();}}).observe(canvas);
@@ -43,13 +43,19 @@
       }
     }
     resize(){const r=this.canvas.getBoundingClientRect();this.w=r.width;this.h=r.height;this.dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(this.w*this.dpr);this.canvas.height=Math.round(this.h*this.dpr);this.render(performance.now());}
-    rotate(v){const sy=Math.sin(this.renderYaw),cy=Math.cos(this.renderYaw),sp=Math.sin(this.pitch),cp=Math.cos(this.pitch);const x=v[0]*cy+v[2]*sy,z=-v[0]*sy+v[2]*cy;return[x,v[1]*cp-z*sp,v[1]*sp+z*cp];}
+    rotate(v){const sy=Math.sin(this.renderYaw),cy=Math.cos(this.renderYaw),sp=Math.sin(this.renderPitch??this.pitch),cp=Math.cos(this.renderPitch??this.pitch);const x=v[0]*cy+v[2]*sy,z=-v[0]*sy+v[2]*cy;return[x,v[1]*cp-z*sp,v[1]*sp+z*cp];}
     project(v){const p=this.rotate(v);return{x:this.w/2+p[0]*this.scale,y:this.h*.51-p[1]*this.scale,z:p[2]};}
     face(points,color,normal,texture=null,double=false){const n=normal||norm(cross(points[1].map((v,i)=>v-points[0][i]),points[2].map((v,i)=>v-points[0][i])));const r=this.rotate(n);if(!double&&r[2]<.001)return;this.faces.push({points:points.map(v=>this.project(v)),color,normal:r,texture,double});}
     box(cx,cy,cz,w,h,d,color){const l=cx-w/2,r=cx+w/2,b=cy-h/2,t=cy+h/2,f=cz+d/2,k=cz-d/2;
       this.face([[l,b,f],[r,b,f],[r,t,f],[l,t,f]],color,[0,0,1]);this.face([[r,b,k],[l,b,k],[l,t,k],[r,t,k]],color,[0,0,-1]);
       this.face([[r,b,f],[r,b,k],[r,t,k],[r,t,f]],color,[1,0,0]);this.face([[l,b,k],[l,b,f],[l,t,f],[l,t,k]],color,[-1,0,0]);
       this.face([[l,t,f],[r,t,f],[r,t,k],[l,t,k]],color,[0,1,0]);this.face([[l,b,k],[r,b,k],[r,b,f],[l,b,f]],color,[0,-1,0]);
+    }
+    flapAngles(progress){
+      const fold=(start,end,angle)=>{const t=Math.max(0,Math.min(1,(progress-start)/(end-start)));return t*t*t*(t*(t*6-15)+10)*angle;};
+      // Outer taped lids clear the rim before the shorter inner flaps unfold.
+      // Reversing progress closes the inner flaps first, then the outer pair.
+      return [fold(0,.64,3.22),fold(.08,.70,3.02),fold(.36,.94,3.12),fold(.42,1,3.08)];
     }
     parcel(scale,tape,fragile,opening=0,offset=[0,0,0]){
       const [ox,oy,oz]=offset,w=1.22*scale,h=.93*scale,d=.94*scale;
@@ -64,18 +70,31 @@
       this.face([p(w-inset,-h,-d+inset),p(-w+inset,-h,-d+inset),p(-w+inset,h,-d+inset),p(w-inset,h,-d+inset)],'#a47c51',[0,0,1]);
       this.face([p(w-inset,-h,d),p(w-inset,-h,-d),p(w-inset,h,-d),p(w-inset,h,d)],'#a47c51',[-1,0,0]);
       this.face([p(-w+inset,-h,-d),p(-w+inset,-h,d),p(-w+inset,h,d),p(-w+inset,h,-d)],'#a47c51',[1,0,0]);
-      // Interior rim and a small mint surprise are revealed by the opening flaps.
-      if(opening>.01){this.box(ox,oy-h+.13,oz,w*1.95,.17,d*1.95,'#8e6b48');this.box(ox,oy-.42*scale,oz,.82*scale,.75*scale,.82*scale,tape);}
-      const a=opening*2.05,s=Math.sin(a),c=Math.cos(a);
-      const front=[p(-w,h,d),p(w,h,d),p(w,h+d*s,d-d*c),p(-w,h+d*s,d-d*c)];
-      const back=[p(w,h,-d),p(-w,h,-d),p(-w,h+d*s,-d+d*c),p(w,h+d*s,-d+d*c)];
-      const sideA=[p(w,h,-d),p(w,h,d),p(w-w*c,h+w*s,d),p(w-w*c,h+w*s,-d)];
-      const sideB=[p(-w,h,d),p(-w,h,-d),p(-w+w*c,h+w*s,-d),p(-w+w*c,h+w*s,d)];
-      this.face(sideA.map(v=>[v[0],v[1]-.035*scale,v[2]]),'#b3895c',null,null,true);this.face(sideB.map(v=>[v[0],v[1]-.035*scale,v[2]]),'#b3895c',null,null,true);this.face(front,'#d8b182',null,null,true);this.face(back,'#d8b182',null,null,true);
-      // The tape follows the hinged flaps instead of hovering over the open box.
-      const tw=.19*scale,eps=.009;
-      this.face([p(-tw,h+eps,d),p(tw,h+eps,d),p(tw,h+d*s+eps,d-d*c),p(-tw,h+d*s+eps,d-d*c)],tape,null,null,true);
-      this.face([p(tw,h+eps,-d),p(-tw,h+eps,-d),p(-tw,h+d*s+eps,-d+d*c),p(tw,h+d*s+eps,-d+d*c)],tape,null,null,true);
+      // Contents exist throughout the motion; the closed lids naturally occlude them.
+      this.box(ox,oy-.48*scale,oz,.82*scale,.68*scale,.82*scale,tape);
+      const angles=this.flapAngles(opening),thickness=.018*scale;
+      // A lid is a rigid, thin panel rotating about a fixed carton edge.
+      const panel=(points,normal,color)=>{
+        const underside=points.map(v=>v.map((n,i)=>n-normal[i]*thickness));
+        this.face(points,color,normal,null,true);
+        this.face(underside,'#b38a60',normal.map(n=>-n),null,true);
+        for(let i=0;i<4;i++){const j=(i+1)%4;this.face([points[i],points[j],underside[j],underside[i]],'#a47c51',null,null,true);}
+      };
+      const major=(front,angle)=>{
+        const sign=front?1:-1,c=Math.cos(angle),sin=Math.sin(angle),length=d-.009*scale;
+        const n=[0,c,sign*sin],at=(x,u)=>p(x,h+u*sin,sign*(d-u*c));
+        const pts=[at(-w,0),at(w,0),at(w,length),at(-w,length)];
+        panel(pts,n,'#d8b182');
+        const tw=.19*scale,offset=v=>v.map((x,i)=>x+n[i]*.008*scale);
+        this.face([at(-tw,0),at(tw,0),at(tw,length),at(-tw,length)].map(offset),tape,n,null,true);
+      };
+      const minor=(right,angle)=>{
+        const sign=right?1:-1,c=Math.cos(angle),sin=Math.sin(angle),length=w*.79;
+        const n=[sign*sin,c,0],at=(z,u)=>p(sign*(w-u*c),h-.035*scale+u*sin,z);
+        panel([at(-d+.016*scale,0),at(d-.016*scale,0),at(d-.016*scale,length),at(-d+.016*scale,length)],n,'#c39a6b');
+      };
+      minor(true,angles[2]);minor(false,angles[3]);major(true,angles[0]);major(false,angles[1]);
+      const tw=.19*scale;
       this.face([p(-tw,-h,d+.01),p(tw,-h,d+.01),p(tw,h,d+.01),p(-tw,h,d+.01)],tape,[0,0,1]);
       this.face([p(tw,-h,-d-.01),p(-tw,-h,-d-.01),p(-tw,h,-d-.01),p(tw,h,-d-.01)],tape,[0,0,-1]);
       this.face([p(.33*scale,.52*scale,d+.018),p(1.04*scale,.52*scale,d+.018),p(1.04*scale,-.2*scale,d+.018),p(.33*scale,-.2*scale,d+.018)],'#f5f2e5',[0,0,1],labelTexture);
@@ -95,16 +114,23 @@
     render(now){if(!this.renderer||this.w<2||!this.visible)return;const hero=this.kind==='hero';const kind=hero?state.model:this.kind;const tape=hero||kind==='packing'||kind==='sizer'?state.tape:kind==='van'?'#9dbef3':kind==='care'?'#e5a4bc':'#b1e69e';
       const dt=Math.min(50,this.lastRender?now-this.lastRender:16.67);this.lastRender=now;
       const ease=1-Math.exp(-dt/110),desired=hero?(state.open&&kind==='parcel'?1:0):this.desiredOpen;
-      this.open=motion?this.open+(desired-this.open)*ease:desired;
-      if(Math.abs(desired-this.open)<.001)this.open=desired;
+      if(motion){
+        const distance=desired-this.open;
+        const velocity=Math.abs(distance)<.0001?0:Math.sign(distance)/900;
+        this.openVelocity+=(velocity-this.openVelocity)*(1-Math.exp(-dt/65));
+        const previous=this.open;this.open=Math.max(0,Math.min(1,this.open+this.openVelocity*dt));
+        if((desired-previous)*(desired-this.open)<=0||Math.abs(distance)<.0001){this.open=desired;this.openVelocity=0;}
+      }else{this.open=desired;this.openVelocity=0;}
       // The van stays rigid. Only explicit hero drag/keyboard input rotates it.
       // Other illustrations ease to hover targets; phase stops rather than snapping on pause.
       const hoverTarget=motion&&kind!=='van'?this.hover:0;
       this.hoverBlend=motion?this.hoverBlend+(hoverTarget-this.hoverBlend)*ease:0;
       if(Math.abs(hoverTarget-this.hoverBlend)<.001)this.hoverBlend=hoverTarget;
-      if(motion&&!state.paused&&!this.interacting&&kind!=='van')this.phase+=dt*.0003;
+      if(motion&&!state.paused&&!this.interacting&&kind!=='van'&&this.open===0&&desired===0)this.phase+=dt*.0003;
       this.renderYaw=this.yaw+(kind==='van'?0:Math.sin(this.phase)*.1)+(hero?0:this.hoverBlend*.17);
-      this.scale=Math.min(this.w/(hero?4.65:4.8),this.h/(hero?4.35:3.5))*(kind!=='van'?1-this.open*.22:1);this.faces=[];
+      const framing=hero&&kind==='parcel'||kind==='packing';
+      this.renderPitch=this.pitch+this.open*.28;
+      this.scale=Math.min(this.w/(framing?5.6:4.8),this.h/(framing?4.9:3.5));this.faces=[];
       // A horizontal floor mesh shares the same depth buffer as the parcel.
       const ground=kind==='van'?-.98:-.93*(hero||kind==='sizer'?sizes[state.size].scale:.86)-.015;
       const floor=[];for(let i=0;i<48;i++){const a=i/48*Math.PI*2;floor.push([Math.cos(a)*1.7,ground,Math.sin(a)*1.05]);}
@@ -117,7 +143,7 @@
   const packingModel=new Illustration($('#packing-canvas'),'packing'),sizerModel=new Illustration($('#sizer-canvas'),'sizer');
   const illustrations=[hero,packingModel,sizerModel,...$$('.service-canvas').map(c=>new Illustration(c,c.dataset.scene))];
   let modelFrame=0;
-  const needsFrame=i=>{const kind=i.kind==='hero'?state.model:i.kind;return i.renderer&&!i.renderer.lost&&i.visible&&motion&&((!state.paused&&kind!=='van'&&!i.interacting)||Math.abs(i.open-(i.kind==='hero'?(state.open&&state.model==='parcel'?1:0):i.desiredOpen))>.001||(kind!=='van'&&Math.abs(i.hoverBlend-i.hover)>.001));};
+  const needsFrame=i=>{const kind=i.kind==='hero'?state.model:i.kind;return i.renderer&&!i.renderer.lost&&i.visible&&motion&&((!state.paused&&kind!=='van'&&!i.interacting)||Math.abs(i.open-(i.kind==='hero'?(state.open&&state.model==='parcel'?1:0):i.desiredOpen))>.00001||(kind!=='van'&&Math.abs(i.hoverBlend-i.hover)>.001));};
   function scheduleModels(){if(!modelFrame&&!document.hidden&&illustrations.some(needsFrame))modelFrame=requestAnimationFrame(frame);}
   function frame(now){modelFrame=0;if(document.hidden)return;illustrations.forEach(i=>{if(needsFrame(i))i.render(now);});scheduleModels();}
   const renderAll=()=>{illustrations.forEach(i=>i.render(performance.now()));scheduleModels();};

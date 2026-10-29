@@ -12,3 +12,15 @@ const parcel=create('parcel');parcel.hover=1;parcel.render(16);assert(parcel.hov
 context.state.paused=true;const phase=parcel.phase;parcel.render(1000);assert.equal(parcel.phase,phase,'Pause must preserve the current phase');
 context.motion=false;parcel.render(1100);assert.equal(parcel.hoverBlend,0,'Reduced motion must disable hover rotation');
 console.log('PASS: stable service van, stable hero van, explicit rotation, eased hover, pause continuity, reduced motion.');
+context.motion=true;context.state.model='parcel';context.state.paused=true;context.state.open=false;
+const carton=create('hero');carton.render(1000);const fixedScale=carton.scale;
+context.state.open=true;
+let previous=0;
+for(let t=1016;t<=2600;t+=16){carton.render(t);assert(carton.open>=previous,'Opening should advance monotonically');assert.equal(carton.scale,fixedScale,'Carton must not zoom during opening');previous=carton.open;}
+assert.equal(carton.open,1,'Opening must finish at a finite time');
+const mid=carton.flapAngles(.3);assert(mid[0]>0&&mid[1]>0&&mid[2]===0&&mid[3]===0,'Outer lids must open before inner flaps');
+assert(carton.flapAngles(1).every(a=>a>Math.PI*.95),'Fully open flaps must fold out, rather than standing upright');
+context.state.open=false;for(let t=2616;t<=4200;t+=16)carton.render(t);assert.equal(carton.open,0,'Closing must settle fully');
+context.state.open=true;for(let t=4216;t<=4500;t+=16)carton.render(t);const before=carton.open;context.state.open=false;carton.render(4516);assert(Math.abs(carton.open-before)<.025,'Reversing mid-animation must not jump');
+context.motion=false;carton.render(4532);assert.equal(carton.open,0,'Reduced motion must immediately show the requested state');
+console.log('PASS: staged flaps, finite open/close, stable scale, continuous reversal, reduced-motion endpoints.');
